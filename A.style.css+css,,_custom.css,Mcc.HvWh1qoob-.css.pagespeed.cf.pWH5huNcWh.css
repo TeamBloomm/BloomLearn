@@ -1227,7 +1227,7 @@ p {
 
 .content-widget hr,
 .footer hr {
-    border-color: #999eab;
+    border-color: white;
     margin: 0;
     border-width: 2px;
     width: 45px
@@ -1235,7 +1235,7 @@ p {
 
 .footer p {
     padding-bottom: 10px;
-    color: #999eab
+    color: white
 }
 
 .latest-tweets p:before {
@@ -1243,7 +1243,7 @@ p {
     font-family: "FontAwesome";
     font-size: 16px;
     left: 0;
-    color: #999eab;
+    color: white;
     padding-right: 5px;
     position: relative;
     top: 2px
@@ -1278,12 +1278,12 @@ p {
 }
 
 .contact-details li a {
-    color: #999eab;
+    color: white;
     text-decoration: underline!important
 }
 
 .contact-details li {
-    color: #999eab;
+    color: white;
     margin-bottom: 5px
 }
 
@@ -2713,34 +2713,34 @@ fieldset[disabled] .btn-default.active,
 .nav>li>a.btn:hover,
 .btn-default:focus,
 .btn-default:hover {
-    background-color: #c42c00!important;
-    border-color: #fd652b!important
+    background-color: #4D72F4!important;
+    border-color: #4D72F4!important
 }
 
 .course-meta .label-primary,
 .feature-list i {
     background-color: #4D72F4;
-    border-color: #fd652b
+    border-color: #4D72F4
 }
 
 .visible-buttons a,
 .ttmenu .img-thumbnail {
-    background-color: #fd652b;
-    border-color: #c42c00
+    background-color: #4D72F4;
+    border-color: #4D72F4
 }
 
 .ttmenu hr {
-    background-color: #fd652b;
-    border-color: #c42c00;
+    background-color: #4D72F4;
+    border-color: #4D72F4;
     height: 2px
 }
 
 .sidebar-nav li.active {
-    border-right-color: #fd652b
+    border-right-color: #4D72F4
 }
 
 .form-control:focus {
-    border-color: #c42c00
+    border-color: #4D72F4
 }
 
 .shop-cart tbody .remove a,
