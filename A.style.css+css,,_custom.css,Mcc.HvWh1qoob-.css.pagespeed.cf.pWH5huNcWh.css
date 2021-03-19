@@ -1604,7 +1604,7 @@ p {
 }
 
 .course-table .fa-close {
-    background-color: red;
+    background-color: #4D72F4;
     color: #fff;
     width: 20px;
     height: 20px;
@@ -1936,12 +1936,12 @@ p {
 
 .my_planHeader.my_plan2,
 .my_planHeader.my_plan1 {
-    background: #5ba5af!important;
-    border-bottom: thick solid #3a848e!important
+    background: #4D72F4 f!important;
+    border-bottom: thick solid #4D72F4 !important
 }
 
 .my_planHeader.my_plan2 {
-    background: #5ba5af;
+    background: #4D72F4 f;
     border-bottom: thick solid #6c833e
 }
 
@@ -1951,7 +1951,7 @@ p {
 
 .my_planHeader.my_plan3 {
     background: #4D72F4;
-    border-bottom: thick solid #c32b00
+    border-bottom: thick solid #4D72F4
 }
 
 .my_planFeature {
@@ -1964,7 +1964,7 @@ p {
 }
 
 .my_planFeature i.no_check {
-    color: red
+    color: #4D72F4
 }
 
 .my_feature p {
@@ -2632,9 +2632,9 @@ mark,
 .pagination>li>a,
 .pagination>li>span,
 .btn-primary {
-    background-color: #5ba5af;
+    background-color: #4D72F4 f;
     color: #fff!important;
-    border-color: #5ba5af
+    border-color: #4D72F4 f
 }
 
 .btn-primary.disabled,
@@ -2660,13 +2660,13 @@ fieldset[disabled] .btn-primary.active,
 .pagination>li>span:hover,
 .btn-primary:focus,
 .btn-primary:hover {
-    background-color: #428992;
-    border-color: #5db9c5
+    background-color: #4D72F4;
+    border-color: #4D72F4;
 }
 
 .blue,
 .topbar {
-    background-color: #5ba5af!important
+    background-color: #4D72F4 f!important
 }
 
 .why-us i,
