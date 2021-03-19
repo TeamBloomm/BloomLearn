@@ -122,17 +122,19 @@
 	list-style:none;
 }
 .ttmenu .navbar-brand {
-    color: #fff !important;
+    color: #4D72F4 !important;
     float: left;
-    font-size: 20px;
-    height:52px;
+    font-size: 30px;
+    /* height: 40px; */
 	background:none;
-    line-height: 38px;
+    /* line-height: 30px; */
     position: relative;
     text-align: center;
     top: 0;
-    width:65px;
+    width:60px;
 }
+
+
 .ttmenu .navbar-collapse {
     border-bottom: 0  !important;
 }

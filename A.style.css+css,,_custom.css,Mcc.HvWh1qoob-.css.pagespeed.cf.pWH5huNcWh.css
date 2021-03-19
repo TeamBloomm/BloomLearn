@@ -1,8 +1,13 @@
 @import url(http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700);
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic);
 @import url(https://fonts.googleapis.com/css?family=Droid+Serif:400,400italic,700,700italic);
+
+* {
+    box-sizing: border-box;
+}
 body {
-    background: #eeedef;
+    width: 100% !important;
+    background: #4D72F4;
     color: #777;
     font-size: 14px;
     line-height: 1.9;
@@ -53,7 +58,7 @@ h6 {
 }
 
 a {
-    color: #696969
+    color: #696969;
 }
 
 h1 a,
@@ -65,6 +70,57 @@ h6 a {
     text-decoration: none!important
 }
 
+.banner-content {
+    width: ;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.header-img {
+    /* margin-left: 60%; */
+    transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+.banner-text {
+    color: #fff;
+    /* left: 89px; */
+    font-family: Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 83px;
+}
+
+.banner-text-small {
+    color: #fff;
+    
+}
+
+.btn-start {
+    background-color: #fff;
+    border: 2px solid  #fff;
+    border-radius: 5px;
+    padding: 5px;
+    margin-right: 10px;
+}
+.btn-start a {
+    color: #4D72F4 !important;  
+}
+
+.btn-donate {
+    background-color:  #4D72F4;
+    border: 2px solid  #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.btn-donate a {
+    color:#fff !important;
+}
 img.aligncenter {
     display: block;
     text-align: center;
@@ -96,7 +152,7 @@ img.alignleft {
 img.alignright {
     padding: 0;
     float: right;
-    margin: 6px 0 6px 20px;
+    margin-left: 40%;
     border: 0;
     display: block;
     background: none
@@ -489,7 +545,7 @@ p {
 .tp-banner-container {
     width: 100%;
     position: relative;
-    padding: 0;
+    padding: 20px;
     z-index: 0
 }
 
@@ -1181,11 +1237,12 @@ p {
 }
 
 .copyright {
-    background-color: #363b48;
-    padding: 20px 0 10px;
+    background-color: #4D72F4;
+    padding: 35px 10px 35px;
     display: block;
     position: relative;
-    text-transform: capitalize
+    text-transform: capitalize;
+    height: 100px;
 }
 
 .copyright a,
@@ -2760,7 +2817,7 @@ a:hover,
 .latest-tweets p a,
 .shop-item-list h4 a:hover,
 .shop-item-list h4:hover {
-    color: #4D72F4
+    color: #fff;
 }
 
 .nav>li>a.active,
