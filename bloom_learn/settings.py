@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'child.apps.ChildConfig',
+    'teacher.apps.TeacherConfig',
     'django_countries',
     'phonenumber_field',
 ]
@@ -79,11 +80,12 @@ WSGI_APPLICATION = 'bloom_learn.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'djongo',
+        'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'name': 'BloomStore',
-            'host': 'mongodb+srv://fortune:7q8gQ35qOBENBjTj@bloomstore.gnv8c.mongodb.net/BloomStore?retryWrites=true&w=majority',
-            'username': 'fortune',
-            'password': '7q8gQ35qOBENBjTj', 
+            'name': 'bloom-store',
+            'host': '',
+            'username': '', 
+            'password': '',
             "authMechanism": "SCRAM-SHA-1",
         },
     }

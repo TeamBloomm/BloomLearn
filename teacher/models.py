@@ -9,15 +9,8 @@ from django.core.validators import RegexValidator
 from django_countries.fields import CountryField
 from phonenumber_field.modelfields import PhoneNumberField
 
-class Guardian(models.Model):
-    first_name = models.CharField(max_length = 100)
-    last_name = models.CharField(max_length = 100)
-    email_address = models.EmailField(max_length=100)
-    
-    class Meta: 
-        abstract = True
 
-class Child(models.Model):
+class TeacherData(models.Model):
     first_name = models.CharField(max_length = 100, primary_key =True)
     last_name = models.CharField(max_length = 100)
     phone_regex = RegexValidator(regex=r'^\+?1?\d{9,15}$', 
@@ -26,10 +19,8 @@ class Child(models.Model):
     email_address = models.EmailField(max_length=100)
     country = models.CharField(max_length=100)
     state = models.CharField(max_length = 100)
-    grade = models.IntegerField()
     password = models.CharField(max_length = 20)
     repeat_pass = models.CharField(max_length = 20)
-    guardian = models.EmbeddedField(model_container=Guardian)
     published_date = models.DateTimeField(auto_now_add=True, ) 
     objects = models.DjongoManager()
 
