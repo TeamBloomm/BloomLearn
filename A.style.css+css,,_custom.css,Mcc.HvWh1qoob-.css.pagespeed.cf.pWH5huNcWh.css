@@ -104,8 +104,11 @@ h6 a {
     background-color: #fff;
     border: 2px solid  #fff;
     border-radius: 5px;
-    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
     margin-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
 }
 .btn-start a {
     color: #4D72F4 !important;  
@@ -115,7 +118,10 @@ h6 a {
     background-color:  #4D72F4;
     border: 2px solid  #fff;
     border-radius: 5px;
-    padding: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    font-weight: 600;
 }
 
 .btn-donate a {
@@ -1217,7 +1223,7 @@ p {
 }
 
 .nav-tabs>li.active>a,
-.nav-tabs>li.active>a:hover,
+.nav-tabs>li.active>,
 .nav-tabs>li.active>a:focus {
     background-color: #fff!important
 }
@@ -2817,7 +2823,7 @@ a:hover,
 .latest-tweets p a,
 .shop-item-list h4 a:hover,
 .shop-item-list h4:hover {
-    color: #fff;
+    color: rgb(0, 0, 0);
 }
 
 .nav>li>a.active,
