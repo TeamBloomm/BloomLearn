@@ -58,91 +58,13 @@
               <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                   <li class="dropdown ttmenu-half">
-                    <a href="#" data-toggle="dropdown" class="dropdown-toggle"
-                      >Home <b class="fa fa-angle-down"></b
-                    ></a>
+                    <a href="index.html">Home</a>
                   </li>
-                  <li><a href="page-about.html">About</a></li>
-                  <li class="dropdown ttmenu-half">
-                    <a
-                      href="#"
-                      data-toggle="dropdown"
-                      class="dropdown-toggle active"
-                      >Courses <b class="fa fa-angle-down"></b
-                    ></a>
-                    <ul class="dropdown-menu">
-                      <li>
-                        <div class="ttmenu-content">
-                          <div class="row">
-                            <div class="col-md-6">
-                              <div class="box">
-                                <ul>
-                                  <li>
-                                    <a href="course-list.html">Courses List</a>
-                                  </li>
-                                  <li>
-                                    <a href="course-grid.html">Courses Grid</a>
-                                  </li>
-                                  <li>
-                                    <a href="course-filterable.html"
-                                      >Courses Filterable</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="course-single.html"
-                                      >Single Course</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="course-quiz.html">Take a Quiz</a>
-                                  </li>
-                                  <li>
-                                    <a href="course-achievements.html"
-                                      >Achievements</a
-                                    >
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                            <div class="col-md-6">
-                              <div class="box">
-                                <ul>
-                                  <li>
-                                    <a href="course-instructors.html"
-                                      >Course Instructors</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="forums.html">Community Forums</a>
-                                  </li>
-                                  <li>
-                                    <a href="course-login.html"
-                                      >Login & Register</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="course-account.html"
-                                      >Edit Your Account</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="course-testimonials.html"
-                                      >Happy Students</a
-                                    >
-                                  </li>
-                                  <li>
-                                    <a href="course-faqs.html"
-                                      >Friendly Asked Questions</a
-                                    >
-                                  </li>
-                                </ul>
-                              </div>
-                            </div>
-                          </div>
-                          <hr />
-                        </div>
-                      </li>
-                    </ul>
+                  <li>
+                      <a href="page-about.html">About</a>
+                    </li>
+                  <li>
+                      <a href="teacher-dashboard.html">Courses</a>
                   </li>
                 </ul>
               </div>
@@ -180,14 +102,13 @@
                 />
               </div>
               <div class="course-meta">
-                <p>AMANDA FOX</p>
+                <p>BLOOMER</p>
                 <hr />
                 <p>
-                  My Profile
-                  <small><a href="course-account.html">Edit</a></small>
-                </p>
+                    <a href="edit-profile.html">Edit Profile</a>
+                  </p>
                 <hr />
-                <p><a href="#"></a> My Courses<small class="label label-primary">0</small></p>
+                <p><a href="teacher-dashboard.html">My Courses</a><small class="label label-primary">0</small></p>
                 <hr />
                 <p>
                   Messages
@@ -200,13 +121,7 @@
                 </p>
                 <hr />
                 <p>
-                  Settings
-                  <!-- <small class="label label-primary"><a href="#">0</a></small> -->
-                </p>
-                <hr />
-                <p>
-                  Logout
-                  <!-- <small class="label label-primary"><a href="signin.html">0</a></small> -->
+                    <a href="signin.html">Logout</a>
                 </p>
                 <hr />
               </div>
@@ -214,12 +129,6 @@
             <div id="course-content" class="col-md-9">
               <div class="course-description">
                 <h3 class="course-title">Start a new Course</h3>
-                <p>
-                  Lorem Ipsum is simply dummy text of the printing and
-                  typesetting industry. Lorem Ipsum has been the industry's
-                  standard dummy text ever since the 1500s, when an unknown
-                  printer <a href="#">took</a>..
-                </p>
                 <div class="edit-profile">
                   <form role="form">
                     <div class="form-group">
@@ -239,6 +148,14 @@
                         ></textarea>
                       </div>
                       <div class="form-group">
+                        <label>Course Grade</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder=""
+                        />
+                      </div>
+                      <div class="form-group">
                         <label>How many students can your course hold?</label>
                         <input
                           type="text"
@@ -246,10 +163,25 @@
                           placeholder=""
                         />
                       </div>
-                    <div class="form-group">
-                      <label>Upload Course Materials</label>
-                      <input type="file" class="btn btn-primary" />
-                    </div>
+                      <div class="form-group">
+                        <label>Upload Course Cover Image</label>
+                        <input type="file" class="btn btn-primary" />
+                      </div>
+
+                      <div class="course-description">
+                        <h3 class="course-title">Course Content</h3>
+                        <div class="form-group">
+                            <label>Attach Video Content</label>
+                            <input type="file" class="btn btn-primary" />
+                        </div>
+                        <div class="form-group">
+                            <label>Attach Text Content (.pdf, .docx)</label>
+                            <input type="file" class="btn btn-primary" />
+                        </div>
+                        <div class="form-group">
+                            <label><a href="#quiz.html"></a> Add Quiz</label>
+                            <!-- <input type="file" class="btn btn-primary" /> -->
+                        </div>
                     <button type="submit" class="btn btn-primary">
                       Upload Course
                     </button>
