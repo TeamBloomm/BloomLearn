@@ -1,0 +1,10 @@
+{% block content %}
+<h2>Signin Details</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <p>{{form.as_ul}}</p>
+    <input type="submit" value="Register">
+</form>
+<p><a href="{% url 'signout' %}">Log Out</a></p>
+{% endblock %}
