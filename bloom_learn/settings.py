@@ -11,7 +11,10 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 """
 import dns
 from pathlib import Path
+import environ
 
+env = environ.Env()
+environ.Env.read_env()
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -82,15 +85,14 @@ DATABASES = {
         'ENGINE': 'djongo',
         'ENFORCE_SCHEMA': False,
         'CLIENT': {
-            'name': 'bloom-store',
-            'host': '',
-            'username': '', 
-            'password': '',
-            "authMechanism": "SCRAM-SHA-1",
+            'name': env('DATABASE_NAME'),
+            'host': env('DATABASE_HOST'),
+            'username': env('DATABASE_USERNAME'), 
+            'password': env('DATABASE_PASSWORD'),
+            "authMechanism": env('DATABASE_authMechanism'),
         },
     }
 }
-
 
 # Password validation
 # https://docs.djangoproject.com/en/3.1/ref/settings/#auth-password-validators
@@ -124,6 +126,9 @@ USE_L10N = True
 
 USE_TZ = True
 
+PHONENUMBER_DB_FORMAT = 'NATIONAL'
+
+PHONENUMBER_DEFAULT_REGION = 'NG'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.1/howto/static-files/

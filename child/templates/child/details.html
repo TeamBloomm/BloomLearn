@@ -1,0 +1,9 @@
+{% block content %}
+<h2>Collect Child Details</h2>
+
+<form method="post">
+    {% csrf_token %}
+    <p>{{child_data_form.as_ul}}</p>
+    <input type="submit" value="Submit">
+</form>
+{% endblock %}
