@@ -28,7 +28,7 @@ SECRET_KEY = 'm@x%dpwl@=-g2kueluz3%&_swazr0+)rq5ns&u%3$5reud$8wf'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['https://bloomlearn.azurewebsites.net/']
 
 
 # Application definition
