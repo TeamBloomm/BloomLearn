@@ -36,10 +36,9 @@ class ChildData(models.Model):
     country = CountryField(blank_label='(select country)')
     state = models.CharField(max_length = 100)
     grade = models.IntegerField()
-    guardian = models.EmbeddedField(
-        model_container=Guardian,
-        model_form_class=GuardianForm
-        )
+    guardian_first_name = models.CharField(max_length = 100, primary_key =True)
+    guardian_last_name = models.CharField(max_length = 100)
+    guardian_email_address = models.EmailField(max_length=100)
     published_date = models.DateTimeField(auto_now_add=True, ) 
     objects = models.DjongoManager()
 
