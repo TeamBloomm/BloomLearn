@@ -4,7 +4,7 @@ from django.contrib.auth.forms import UserCreationForm
 
 from django_countries.widgets import CountrySelectWidget
 
-from child.models import ChildData, Guardian
+from child.models import ChildData
 
 
 class UserForm(UserCreationForm):
@@ -16,10 +16,7 @@ class UserForm(UserCreationForm):
         model = User
         fields = ('first_name','last_name', 'username', 'email', 'password1' ,'password2' )
 
-class GuardianForm(forms.ModelForm):
-    class Meta:
-        model = Guardian
-        fields = "__all__"
+
 
 class ChildRegistrationForm(forms.ModelForm):
     # Specify the name of the model to use.

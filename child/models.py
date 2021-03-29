@@ -9,7 +9,6 @@ from django.conf import settings
 
 from django_countries.fields import CountryField
 from phonenumber_field.modelfields import PhoneNumberField
-from child.forms import GuardianForm
 
 class Guardian(models.Model):
     first_name = models.CharField(max_length = 100, primary_key =True)
@@ -22,6 +21,10 @@ class Guardian(models.Model):
     class Meta: 
         abstract = True
 
+class GuardianForm(forms.ModelForm):
+    class Meta:
+        model = Guardian
+        fields = "__all__"
 
 class ChildData(models.Model):
     c_id = models.ForeignKey(

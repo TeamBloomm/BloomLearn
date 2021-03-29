@@ -61,7 +61,6 @@ local_settings.py
 db.sqlite3
 db.sqlite3-journal
 .config
-#.env
 
 # Flask stuff:
 instance/
@@ -104,7 +103,7 @@ celerybeat.pid
 *.sage.py
 
 # Environments
-.env
+#.env
 .venv
 env/
 venv/
