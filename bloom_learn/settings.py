@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/3.1/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.1/ref/settings/
 """
-import dns
+import dns, os
 from pathlib import Path
 import environ
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'teacher.apps.TeacherConfig',
     'django_countries',
     'phonenumber_field',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -69,6 +70,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.media',
             ],
         },
     },
@@ -134,3 +136,17 @@ PHONENUMBER_DEFAULT_REGION = 'NG'
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 STATIC_URL = '/static/'
+
+#MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+#MEDIA_URL= "media/"
+
+DEFAULT_FILE_STORAGE = 'backend.custom_azure.AzureMediaStorage'
+#STATICFILES_STORAGE = 'backend.custom_azure.AzureStaticStorage'
+
+#STATIC_LOCATION = "static"
+MEDIA_LOCATION = "media"
+
+AZURE_ACCOUNT_NAME = "bloomlearnstore"
+AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
+#STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
+MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
