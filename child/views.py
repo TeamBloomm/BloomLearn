@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import login, authenticate, logout
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.views import logout_then_login
+
 from child.forms import ChildRegistrationForm, UserForm
 
 def details(request):
@@ -66,6 +68,4 @@ def signin(request):
 
 
 def signout(request):
-    logout(request, next_page='child:signin')
-    #form = AuthenticationForm(request.POST)
-    #return render(request, 'child/signin.html',{'form': form})
+    return logout_then_login(request, login_url='child:signin')

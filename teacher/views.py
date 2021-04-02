@@ -1,8 +1,12 @@
-from django.shortcuts import render, redirect
-from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth import authenticate, login
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.forms import AuthenticationForm
+from django.contrib.auth.views import logout_then_login
+from django.core.files.storage import FileSystemStorage
+from django.shortcuts import redirect, render
 
-from teacher.forms import TeacherRegistrationForm, UserForm
+from teacher.forms import FileUploadForm, TeacherRegistrationForm, UserForm
+
 
 def details(request):
     if request.method == 'POST':
@@ -66,4 +70,16 @@ def signin(request):
 
 
 def signout(request):
-    logout(request, next_page='teacher:signin')
+    return logout_then_login(request, login_url='/teacher/sign-in')
+
+def simple_upload(request):
+    if request.method == 'POST':
+        file_form = FileUploadForm(request.POST, request.FILES)
+        if file_form.is_valid():
+            file_form.save()#commit=False)
+            return redirect('teacher:homepage')
+    else:
+        file_form = FileUploadForm()
+    return render(request, 'teacher/simple_upload.html', {
+        'file_form': file_form
+    })
