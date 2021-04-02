@@ -6,21 +6,32 @@ from child.models import *
 from teacher.models import *
 
 class Slots(models.Model):
-     available = models.IntegerField()
-     timeAvailable = models.IntegerField()
-     dayAvailable = models.IntegerField()
-     teacher = models.ForeignKey(TeacherData, on_delete=models.CASCADE)
+    dateAvailable = models.DateTimeField()
+    teacher = models.ForeignKey(TeacherData, on_delete=models.CASCADE)
+    available = models.BooleanField()
+    sessions = models.ForeignKey('Session', on_delete=models.CASCADE)
 
-     def createSlots(self):
+
+    def createSlots(self):
         self.published_date = timezone.now()
         self.save()
 
+# class slotChoices(datetime.date, models.Choices):
+#     available = models.BooleanField()
+
 class Session(models.Model):
-    title = models.CharField(max_length=200)
+    title = models.CharField(max_length=50,)
+    duration = models.DurationField()
     sessionDate = models.DateTimeField(default=timezone.now)
     child = models.ForeignKey(ChildData, on_delete=models.CASCADE)
-    sessionUrl = models.DateTimeField(blank=True, null=True)
-    slot = models.DateField()
+    teacher = models.ForeignKey(TeacherData, on_delete=models.CASCADE)
+    sessionUrl = models.URLField(max_length=200)
+    # slot = models.DateField()
+    booking_status = models.BooleanField()
+    booking_id = models.CharField(max_length=100, blank=True,)
+    creationDate = models.DateTimeField(auto_now_add=True,)
+    slot = models.ForeignKey('Slots', on_delete=models.CASCADE)
+
 
 
     def childBook(self):

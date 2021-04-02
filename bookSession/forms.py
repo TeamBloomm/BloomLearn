@@ -1,13 +1,14 @@
 from django import forms
 
 from .models import Slots
-from .models import Book
+from .models import Session
 
-class BookForm(forms.ModelForm):
+class SessionForm(forms.ModelForm):
 
     class Meta:
-        model = Book
+        model = Session
         fields = ('title', 'text',)
+        # DateTimeInput()
 
 class SlotsForm (forms.ModelForm):
     class Meta:
