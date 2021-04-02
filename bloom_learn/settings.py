@@ -44,6 +44,8 @@ INSTALLED_APPS = [
     'teacher.apps.TeacherConfig',
     'django_countries',
     'phonenumber_field',
+    'landing.apps.LandingConfig',
+    'bookSession.apps.BooksessionConfig',
     'storages',
 ]
 
