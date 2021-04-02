@@ -11,7 +11,6 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
     <title> Bloom Learn | Online learning Platform</title>
-    {% load static %}
     <link rel="shortcut icon" href="{% static 'images/favicon.png' %}"/>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
     <link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/A.settings.css.pagespeed.cf.xeOyGChsgq.css' %}" media="screen" />
@@ -59,7 +58,7 @@
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                       <li>
-                        <a class="btn btn-primary" href="signup.html"
+                        <a class="btn btn-primary" href="{% url 'child:registration' %}"
                           ><i class="fa fa-sign-in"></i> Register Now</a>
                       </li>
                     </ul>
@@ -74,8 +73,8 @@
                 <div class="banner-content">
                     <h3 class="banner-text">Teach or Learn at the Comfort of your Home</h3>
                     <p class="banner-text-small">We aim to aims to connect teachers and children from all over Africa. Join today and start your journey with us.</p>  
-                    <button class="btn-start"><a href="signup.html">Start Learning</a></button>
-                    <button class="btn-donate"><a href="#">Donate</a></button>               
+                    <button class="btn-start"><a href="{% url 'child:registration' %}">Start Learning</a></button>
+                    <button class="btn-donate"><a href="https://forms.office.com/r/2hk2JQvguq" target="_self">Donate</a></button>               
                 </div>
                 <div class="header-img">
                     <img src="{% static 'images/header-image.png' %}" alt="header-image" height="400px" ; width="400px;" class="img-fluid">
@@ -277,7 +276,7 @@
                         <li><a href="#skillup">About</a></li>
                         <li><a href="#topcourses">Courses</a></li>
                         <li><a href="#testimonials">Testimonials</a></li>
-                        <button class="btn-start" style="float: right;">Donate</button>
+                        <a href="https://forms.office.com/r/2hk2JQvguq" target="_self"><button class="btn-start" style="float: right;">Donate</button></a>
                     </ul>
                 </div>
             </div>

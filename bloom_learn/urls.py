@@ -22,6 +22,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('child/', include('child.urls')),  
     path('teacher/', include('teacher.urls')),
-    path('', include('landing.urls')), 
+    path('', include('landing.urls')),
     # path('book/', include('bookSession.urls')),
-]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
+]+ static(settings.STATIC_URL, document_root= settings.STATIC_ROOT) + static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
