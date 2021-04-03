@@ -1,0 +1,9 @@
+{% block content %}
+    <h2>My Sessions</h2>
+    <ul>
+        {% for booking in object_list %}
+            <li><a href="{% url "booking_detail" pk=booking.pk %}">{{ booking }}</a></li>
+        {% endfor %}
+    </ul>
+    <button>Delete</button>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% block content %}
+    <article class="Session">
+        {% if Session.published_date %}
+            <time class="date">
+                {{ Session.published_date }}
+            </time>
+        {% endif %}
+        <h2>{{ Session.title }}</h2>
+        <p>{{ Session.text|linebreaksbr }}</p>
+        <button>Delete</button>
+    </article>
+{% endblock %}
+

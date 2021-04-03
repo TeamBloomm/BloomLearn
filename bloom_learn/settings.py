@@ -139,8 +139,8 @@ PHONENUMBER_DEFAULT_REGION = 'NG'
 
 # STATIC_URL = '/static/'
 
-MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
-MEDIA_URL= "media/"
+# MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
+# MEDIA_URL= "media/"
 
 DEFAULT_FILE_STORAGE = 'backend.custom_azure.AzureMediaStorage'
 STATICFILES_STORAGE = 'backend.custom_azure.AzureStaticStorage'
