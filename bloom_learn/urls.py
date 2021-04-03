@@ -24,4 +24,5 @@ urlpatterns = [
     path('teacher/', include('teacher.urls')),
     path('', include('landing.urls')),
     path('', include('bookSession.urls')),
-]+ static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)
+    path('forum/',include('discussionForum.urls'))
+]+static(settings.MEDIA_URL, document_root= settings.MEDIA_ROOT)+ static(settings.STATIC_URL, document_root= settings.STATIC_ROOT)
