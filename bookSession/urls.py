@@ -9,5 +9,5 @@ urlpatterns = [
     path('cancelSession/', views.cancelSession, name='cancelSession'),
     path('mySessions/', views.mySessions, name='mySessions'),
     path('singleSession/', views.singleSession, name='singleSession'),
-
+    path('mySlots/', views.mySlots, name='mySlots'),
 ]

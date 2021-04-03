@@ -26,7 +26,7 @@ class Migration(migrations.Migration):
                 ('phone_number', phonenumber_field.modelfields.PhoneNumberField(max_length=128, region=None)),
                 ('country', django_countries.fields.CountryField(max_length=2)),
                 ('state', models.CharField(max_length=100)),
-                ('grade', models.IntegerField()),
+                ('grade', models.IntegerField()),  
                 ('guardian', djongo.models.fields.EmbeddedField(model_container=child.models.Guardian)),
                 ('published_date', models.DateTimeField(auto_now_add=True)),
                 ('c_id', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to=settings.AUTH_USER_MODEL)),

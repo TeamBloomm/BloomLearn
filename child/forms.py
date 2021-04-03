@@ -22,6 +22,6 @@ class ChildRegistrationForm(forms.ModelForm):
     # Specify the name of the model to use.
     class Meta:
         model = ChildData
-        fields = ('c_id', 'about_user', 'phone_number', 'country', 'state', 'grade', 'guardian_first_name', 'guardian_last_name', 'guardian_email_address')
+        fields = ('c_id',  'about_user', 'phone_number', 'country', 'state', 'grade', 'guardian_first_name', 'guardian_last_name', 'guardian_email_address')
         widgets = {'country': CountrySelectWidget()}
         

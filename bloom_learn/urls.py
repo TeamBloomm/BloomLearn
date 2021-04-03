@@ -23,6 +23,6 @@ urlpatterns = [
     path('child/', include('child.urls')),  
     path('teacher/', include('teacher.urls')),
     path('', include('landing.urls')),
-    path('', include('bookSession.urls')),
+    path('book/', include('bookSession.urls')),
 ]
 # + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
