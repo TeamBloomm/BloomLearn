@@ -32,17 +32,12 @@
             <p class="mb-4">Already have an account? <span  ><a href="{% url 'child:signin' %}">Sign In</a></span></p>
             <form action="#" method="post">
                 <section class="role-container">
-                   
-                        <div class="form-check form-check-inline role" >
-                            <a href="{% url 'child:registration' %}"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"></a>
-                            <label class="form-check-label" for="inlineRadio1">Student</label>
+                      <div>
+                        <button class="btn-donate"><a href="{% url 'child:registration' %}" target="_self">Student</a></button>
                       </div>
-                      
-                        <div class="form-check form-check-inline role">
-                            <a href="{% url 'teacher:registration' %}"> <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option2"></a>
-                            <label class="form-check-label" for="inlineRadio3">Teacher</label>
-                        </div>
-                      
+                      <div>
+                        <button class="btn-donate"><a href="{% url 'teacher:registration' %}" target="_self">Teacher</a></button>
+                       </div>
                 </section>
             </form>
           </div>
@@ -51,6 +46,6 @@
     </div>
   </div>
 </section>
-    <script src="js/main.js"></script>
+    <script src="{% static 'js/main.js' %}"></script>
   </body>
 </html>

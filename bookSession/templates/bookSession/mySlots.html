@@ -1,9 +1,12 @@
+{% load static %}
+<p>Open Slots</p>
 {% block content %}
+    {% for s in slot %}
     <p>{{slot.user}}</p>
     <ul>
         <li>{{slot.slotDate}}</li>
         <li>{{slot.startTime}}</li>
         <li>{{slot.endTime}}</li>
     </ul>
+    {% endfor %}
 {% endblock %}
-

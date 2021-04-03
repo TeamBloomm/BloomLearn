@@ -140,15 +140,19 @@ PHONENUMBER_DEFAULT_REGION = 'NG'
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 # STATIC_URL = '/static/'
-
+# STATICFILES_DIRS = [ BASE_DIR / "static", '/var/www/static/',]
+# STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
 # MEDIA_ROOT= os.path.join(BASE_DIR, 'media')
-# MEDIA_URL= "media/"
+# MEDIA_URL= "media/" 
+
 
 DEFAULT_FILE_STORAGE = 'backend.custom_azure.AzureMediaStorage'
 STATICFILES_STORAGE = 'backend.custom_azure.AzureStaticStorage'
 
 STATIC_LOCATION = "static"
 MEDIA_LOCATION = "media"
+
+# STATIC_ROOT = os.path.join(BASE_DIR, "/static/")
 
 AZURE_ACCOUNT_NAME = "bloomlearnstore"
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'

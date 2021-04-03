@@ -1,45 +1,53 @@
-from bookSession.models import Session
-from django.shortcuts import render, redirect
+from datetime import time
+from django.db.models.fields import TimeField
+from bookSession.models import *
+from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404
 from child.models import *
 from teacher.models import *
 
-from bookSession.forms import SessionForm
+from bookSession.forms import SessionForm, timeSlotsForm
 # Create your views here.
+
 
 #  --- both teacher and child
 def mySessions(request):
-    return render(request, 'bookSession/mySessions.html')
+    Session = Session.objects.filter(creationDate=timezone.now()).order_by('published_date')
+    return render(request, 'bookSession/mySessions.html',  {'Session': Session})
 
-def cancelSession(request):
-    return render(request, 'bookSession/cancelSession.html')
+def cancelSession(request, id):
+    obj=Session.objects.get(sessionID=id)
+    obj.delete()
+    return render(request, 'bookSession/mySessions.html')
 
 def singleSession(request):
     return render(request, 'bookSession/singleSession.html')
 
+def mySlots(request):
+    slots = timeSlots.objects.filter(slotDate=timezone.now()).order_by('slotDate')
+    return render(request, 'bookSession/mySlots.html', {'slots': slots})
 
-def createSession(request):
+#  --- teacher features
+def createSession(request): # creating a new slot
+    if request.method == "POST":
+        tform =timeSlotsForm(request.POST)
+        if tform.is_valid():
+            slot = tform.save(commit=False)
+            slot.user = request.user
+            slot.save()
+            return render(request, 'bookSession/singleSession.html', {'slot' :slot,})
+    else:
+        tform = timeSlotsForm()
+    return render(request, 'bookSession/createSession.html', {'tform' :tform,})
+
+# --- child features
+def addSession(request): #book session
     if request.method == "POST":
         child_session_form = SessionForm(request.POST)
         if child_session_form.is_valid():
+            child_session_form.user = request.user
             child_session_form.save()
-            return redirect('bookSession:singleSession')
+            return redirect('book_session')
     else:
         child_session_form = SessionForm()
-    return render(request, 'bookSession/createSession.html', {'child_session_form' : child_session_form,})
-
-# --- child features
-def addSession(request):
-    return render(request, 'bookSession/bookSession.html')
-
-
-
-# def bookedSession(request):
-#    if "user" in request.session:
-#        appointments=client.query(q.paginate(q.match(q.index("events_today_paginate"), request.session["user"]["username"],str(datetime.date.today()))))["data"]
-#        appointments_count=len(appointments)
-#        page_number = int(request.GET.get('page', 1))
-#        appointment = client.query(q.get(q.ref(q.collection("Events"), appointments[page_number-1].id())))["data"]
-#        context={"count":appointments_count,"appointment":appointment,"page_num":page_number, "next_page": min(appointments_count, page_number + 1), "prev_page": max(1, page_number - 1)}
-#        return render(request,"today-appointment.html",context)
-#    else:
-#        return HttpResponseNotFound("Page not found")
+    return render(request, 'bookSession/bookSession.html', {'child_session_form' : child_session_form,})

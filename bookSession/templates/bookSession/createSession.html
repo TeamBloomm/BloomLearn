@@ -1,7 +1,7 @@
 {% block content %}
-    <h2>{{Session.title}}</h2>
-    <form method="POST" class="post-form">{% csrf_token %}
-        {{ child_session_form.as_p }}
-        <button type="submit" class="save btn btn-default">Save</button>
+    <h2>Create Slots</h2>
+    <form method="post" class="form">{% csrf_token %}
+        {{ tform }}
+        <input type="submit" value="Create Slot">  
     </form>
 {% endblock %}
