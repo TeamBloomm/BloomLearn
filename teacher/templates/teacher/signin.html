@@ -40,7 +40,7 @@
           <div class="col-md-7">
             <h3>Sign In</h3>
             <p class="mb-4">Don't have an account? <span><a href="{% url 'teacher:registration' %}">Sign Up</a></span></p>
-            <form action="#" method="post">
+            <form action="../home/" method="post">
               {% csrf_token %}
               <div class="form-group first">
                 <label for="username">Email or Username</label>
