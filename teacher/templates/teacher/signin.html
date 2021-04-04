@@ -12,6 +12,7 @@
 {% endblock %} -->
 
 {% load static %} 
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -43,12 +44,16 @@
             <form action="../home/" method="post">
               {% csrf_token %}
               <div class="form-group first">
-                <label for="username">Email or Username</label>
-                <input type="text" class="form-control" id="username" name="username" required>
+                <label for="username">Username</label>
+                <p>{% render_field form.username type="username" class+="form-control" %}</p>
+                <!-- <p class="form-control">{{form.username}}</p> -->
+                <!-- <input type="text" class="form-control" id="username" name="username" for required> -->
               </div>
               <div class="form-group last mb-3">
                 <label for="password">Password</label>
-                <input type="password" class="form-control" name="password" id="password" required>
+                <p>{% render_field form.password type="password" class+="form-control" %}</p>
+                <!-- <input type="password" class="form-control" name="{{form.password.name}}" {% if form.value != None %} -->
+                <!-- value="{{ form.value }}"{% endif %} id="password"  required> -->
               </div>
          
               <div class="d-flex mb-5 align-items-center">

@@ -297,3 +297,8 @@ h2 {
 .social-login a.google {
     background: #fff;
 }
+
+.django-reg{
+    justify-content: center;
+    text-align: center;
+}

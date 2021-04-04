@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'landing.apps.LandingConfig',
     'bookSession.apps.BooksessionConfig',
     'storages',
+    'widget_tweaks',
     'discussionForum.apps.DiscussionforumConfig'
 ]
 

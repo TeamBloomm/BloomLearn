@@ -1,4 +1,4 @@
-{% block content %}
+<!-- {% block content %}
 <h2>Register Child</h2>
 
 <form method="post">
@@ -6,4 +6,82 @@
     <p>{{user_details.as_ul}}</p>
     <input type="submit" value="Register">
 </form>
-{% endblock %}
+{% endblock %} -->
+
+{% load static %}
+{% load widget_tweaks %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/favicon.png"/>
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Bloom | Sign Up and Sign In</title>
+  </head>
+  <body>
+    	<!-- Sign Up -->
+   
+  <section class="d-lg-flex half" >
+    <!-- <div class="bg order-2 order-md-1" style="background-image: url('https://github.com/BethanyJep/silver-happiness/blob/main/bg_1.png?raw=true');width: 100%; height: auto;"></div> -->
+    <div class="contents" style="width: 100%; height: auto; ">
+      <div class="container" style="padding: 5% 0%;">
+        <div class="row align-items-center justify-content-center">
+          <div class="col-md-7">
+            <h3>Sign Up</h3>
+            <p class="mb-4">Already have an account? <span  ><a href="{% url 'teacher:signin' %}">Sign In</a></span></p>
+            <form method="post">
+              {% csrf_token %}
+              <div class="form-group first">
+                <label for="firstname">Firstname</label>
+                <p>{% render_field user_details.first_name type="first_name" class+="form-control" %}</p>
+                <!-- <input type="text" class="form-control" id="username" required> -->
+              </div>
+              <div class="form-group first">
+                <label for="firstname">Lastname</label>
+                <p>{% render_field user_details.last_name type="last_name" class+="form-control" %}</p>
+                <!-- <input type="text" class="form-control" id="username" required> -->
+              </div>
+              <div class="form-group first">
+                <label for="lastname">Username</label>
+                <p>{% render_field user_details.username type="username" class+="form-control" %}</p>
+                <!-- <input type="text" class="form-control" id="username" required> -->
+              </div>
+              <div class="form-group first">
+                <label for="email">Email</label>
+                <p>{% render_field user_details.email type="email" class+="form-control" %}</p>
+                <!-- <input type="email" class="form-control" id="username" required> -->
+              </div>
+              <div class="form-group last mb-3">
+                <label for="password">Password</label>
+                <p>{% render_field user_details.password1 type="password" class+="form-control" %}</p>
+                <!-- <input type="password" class="form-control" id="password"> -->
+              </div>
+              <div class="form-group last mb-3">
+                <label for="password">Confirm Password</label>
+                <p>{% render_field user_details.password2 type="password" class+="form-control" %}</p>
+                <!-- <input type="password" class="form-control" id="password"> -->
+              </div>
+              <input type="submit" value="Next" class="btn btn-block btn-primary">
+                </section>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+  </body>
+</html>
