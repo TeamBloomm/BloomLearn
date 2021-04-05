@@ -43,10 +43,21 @@
                     <div class="col-md-7">
                         <h3>Sign In</h3>
                         <p class="mb-4">Don't have an account? <span><a href="{% url 'teacher:registration' %}">Sign Up</a></span></p>
-                        <form method="post">
-                            {% csrf_token %} {{form.as_p}}
+                        <form  method="post">
+                            {% csrf_token %}
+                            <div class="form-group first">
+                              <label for="username">Username</label>
+                              <p>{% render_field form.username type="username" class+="form-control" %}</p>
+                              <!-- <p class="form-control">{{form.username}}</p> -->
+                              <!-- <input type="text" class="form-control" id="username" name="username" for required> -->
+                            </div>
+                            <div class="form-group last mb-3">
+                              <label for="password">Password</label>
+                              <p>{% render_field form.password type="password" class+="form-control" %}</p>
+                            </div>
+                       
                             <div class="d-flex mb-5 align-items-center">
-                                <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
+                              <label class="control control--checkbox mb-0"><span class="caption">Remember me</span>
                   <input type="checkbox" checked="checked"/>
                   <div class="control__indicator"></div>
                 </label>
