@@ -29,6 +29,7 @@ class TeacherData(models.Model):
     t_id = models.ForeignKey(
         settings.AUTH_USER_MODEL,
         on_delete=models.CASCADE,
+        verbose_name='Username'
     )
     about_user = models.TextField(max_length= 500)
     phone_number = PhoneNumberField() #models.CharField(validators=[phone_regex], max_length=17) # validators should be a list
