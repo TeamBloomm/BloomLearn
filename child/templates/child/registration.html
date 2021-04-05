@@ -26,48 +26,48 @@
 <body>
     <!-- Sign Up -->
 
-    <section class="d-lg-flex half" >
-        <!-- <div class="bg order-2 order-md-1" style="background-image: url('https://github.com/BethanyJep/silver-happiness/blob/main/bg_1.png?raw=true');width: 100%; height: auto;"></div> -->
-        <div class="contents" style="width: 100%; height: auto; ">
-          <div class="container" style="padding: 5% 0%;">
-            <div class="row align-items-center justify-content-center">
-              <div class="col-md-7">
-                <h3>Sign Up</h3>
-                <p class="mb-4">Already have an account? <span  ><a href="{% url 'teacher:signin' %}">Sign In</a></span></p>
-                <form method="post">
-                  {% csrf_token %}
-                  <div class="form-group first">
-                    <label for="firstname">Firstname</label>
-                    <p>{% render_field user_details.first_name type="first_name" class+="form-control" %}</p>
-                    <!-- <input type="text" class="form-control" id="username" required> -->
-                  </div>
-                  <div class="form-group first">
-                    <label for="firstname">Lastname</label>
-                    <p>{% render_field user_details.last_name type="last_name" class+="form-control" %}</p>
-                    <!-- <input type="text" class="form-control" id="username" required> -->
-                  </div>
-                  <div class="form-group first">
-                    <label for="lastname">Username</label>
-                    <p>{% render_field user_details.username type="username" class+="form-control" %}</p>
-                    <!-- <input type="text" class="form-control" id="username" required> -->
-                  </div>
-                  <div class="form-group first">
-                    <label for="email">Email</label>
-                    <p>{% render_field user_details.email type="email" class+="form-control" %}</p>
-                    <!-- <input type="email" class="form-control" id="username" required> -->
-                  </div>
-                  <div class="form-group last mb-3">
-                    <label for="password">Password</label>
-                    <p>{% render_field user_details.password1 type="password" class+="form-control" %}</p>
-                    <!-- <input type="password" class="form-control" id="password"> -->
-                  </div>
-                  <div class="form-group last mb-3">
-                    <label for="password">Confirm Password</label>
-                    <p>{% render_field user_details.password2 type="password" class+="form-control" %}</p>
-                    <!-- <input type="password" class="form-control" id="password"> -->
-                  </div>
-                  <input type="submit" value="Next" class="btn btn-block btn-primary">
-                    </section>
+<section class="d-lg-flex half" >
+  <div class="bg order-2 order-md-1" style="background-image: url('https://github.com/BethanyJep/silver-happiness/blob/main/bg_1.png?raw=true');"></div>
+  <div class="contents" >
+    <div class="container" style="padding: 5% 0%;">
+      <div class="row align-items-center justify-content-center">
+        <div class="col-md-7">
+          <h3>Sign Up</h3>
+          <p class="mb-4">Already have an account? <span  ><a href="{% url 'teacher:signin' %}">Sign In</a></span></p>
+          <form method="post">
+            {% csrf_token %}
+            <div class="form-group first">
+              <label for="firstname">Firstname</label>
+              <p>{% render_field user_details.first_name type="first_name" class+="form-control" %}</p>
+              <!-- <input type="text" class="form-control" id="username" required> -->
+            </div>
+            <div class="form-group first">
+              <label for="firstname">Lastname</label>
+              <p>{% render_field user_details.last_name type="last_name" class+="form-control" %}</p>
+              <!-- <input type="text" class="form-control" id="username" required> -->
+            </div>
+            <div class="form-group first">
+              <label for="lastname">Username</label>
+              <p>{% render_field user_details.username type="username" class+="form-control" %}</p>
+              <!-- <input type="text" class="form-control" id="username" required> -->
+            </div>
+            <div class="form-group first">
+              <label for="email">Email</label>
+              <p>{% render_field user_details.email type="email" class+="form-control" %}</p>
+              <!-- <input type="email" class="form-control" id="username" required> -->
+            </div>
+            <div class="form-group last mb-3">
+              <label for="password">Password</label>
+              <p>{% render_field user_details.password1 type="password" class+="form-control" %}</p>
+              <!-- <input type="password" class="form-control" id="password"> -->
+            </div>
+            <div class="form-group last mb-3">
+              <label for="password">Confirm Password</label>
+              <p>{% render_field user_details.password2 type="password" class+="form-control" %}</p>
+              <!-- <input type="password" class="form-control" id="password"> -->
+            </div>
+            <input type="submit" value="Next" class="btn btn-block btn-primary">
+              </section>
                         </form>
                     </div>
                 </div>

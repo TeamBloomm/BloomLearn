@@ -1,4 +1,5 @@
 {% load static %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 
@@ -32,9 +33,19 @@
                     <div class="col-md-7">
                         <h3>Profile Details</h3>
                         <form method="post">
-                            {% csrf_token %} {{teacher_data_form.as_p}}
+                            {% csrf_token %} 
+                            <!-- {{teacher_data_form.as_p}} -->
+                            <label >Username</label>
+                            <p>{% render_field teacher_data_form.t_id type="username" class+="form-control" %}</p>
+                            <label >Your Bio</label>
+                            <p>{% render_field teacher_data_form.about_user type="username" class+="form-control" %}</p>
+                            <label >Your Phone Number</label>
+                            <p>{% render_field teacher_data_form.phone_number type="username" class+="form-control" %}</p>
+                            <label >Your Country</label>
+                            <p>{% render_field teacher_data_form.country type="username" class+="form-control" %}</p>
+                            <label >State or County</label>
+                            <p>{% render_field teacher_data_form.state type="username" class+="form-control" %}</p>
                             <input type="submit" value="Submit" class="btn btn-block btn-primary">
-    </section>
     </form>
     </div>
     </div>
