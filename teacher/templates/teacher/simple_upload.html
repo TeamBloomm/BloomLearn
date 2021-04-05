@@ -1,8 +1,172 @@
-{% block content %}
-<form method="post" enctype="multipart/form-data">
-    {% csrf_token %} {{ file_form.as_p }}
-    <button type="submit">Upload</button>
-</form>
+{% load static %}
+{% load widget_tweaks %}
 
-<p><a href="{% url 'teacher:homepage' %}">Return to home</a></p>
-{% endblock %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <!-- course-account40:17  -->
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <title>Upload Course</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}"/>
+    <script src="https://kit.fontawesome.com/21af872b52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/A settings css pagespeed.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/A fonts font-awesome-4.3.0.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A menu css pagespeed.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A carousel css bbbpress css.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A style css.css'%}" />
+  </head>
+  <body>
+    <!-- <div id="loader">
+      <div class="loader-container">
+        <img src="{% static 'images/site.gif'%}" alt="" class="loader-site" />
+      </div>
+    </div> -->
+    <div id="wrapper">
+      <section class="grey page-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-left">
+              <h1>Upload </h1>
+            </div>
+            <div class="col-md-6 text-right">
+              <div class="bread">
+                <ol class="breadcrumb">
+                  <li><a href="{% url 'teacher:homepage' %}">Home</a></li>
+                  <!-- <li><a href="#">Courses</a></li> -->
+                  <li class="active">Upload a Course</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="white section">
+        <div class="container">
+          <div class="row">
+            <div id="course-left-sidebar" class="col-md-3">
+              <div class="course-image-widget">
+                <img
+                  src="{% static 'images/xstudent_06.png.pagespeed.ic.M4STWuf1XS.png' %}"
+                  alt=""
+                  class="img-responsive"
+                />
+              </div>
+              <div class="course-meta">
+                <p>BLOOMER</p>
+                <hr />
+                <p>
+                    <a href="{% url 'teacher:details' %}">Edit Profile</a>
+                  </p>
+                <hr />
+                <p><a href="{% url 'teacher:homepage' %}">My Courses</a><small class="label label-primary">0</small></p>
+                <hr />
+                <p>
+                  Messages
+                  <small class="label label-primary"><a href="#">0</a></small>
+                </p>
+                <hr />
+                <p>
+                  Booked Sessions
+                  <small class="label label-primary"><a href="#">0</a></small>
+                </p>
+                <hr />
+                <p>
+                    <a href="{% url 'teacher:signout' %}">Logout</a>
+                </p>
+                <hr />
+              </div>
+            </div>
+            <div id="course-content" class="col-md-9">
+              <div class="course-description">
+                <h3 class="course-title">Start a new Course</h3>
+                <div class="edit-profile">
+                  <form method="post" enctype="multipart/form-data">
+                    {% csrf_token %} 
+                    <div class="form-group">
+                      <label>Course Name</label>
+                      <p>{% render_field file_form.name type="text" class+="form-control" %}</p> 
+                    </div>
+                    <div class="form-group">
+                        <label>Course Description</label>
+                        <p>{% render_field file_form.course type="text" class+="form-control" %}</p> 
+                      </div>
+                      <div class="form-group">
+                        <label>Course Grade</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder=""
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label>How many students can your course hold?</label>
+                        <input
+                          type="text"
+                          class="form-control"
+                          placeholder=""
+                        />
+                      </div>
+                      <div class="form-group">
+                        <label>Upload Course Cover Image</label>
+                        <input type="file" class="btn btn-primary" />
+                      </div>
+                      <div class="course-description">
+                        <h3 class="course-title">Course Content</h3>
+                        <p>{% render_field file_form.filepath type="file" class+="form-control" %}</p> 
+                    <button type="submit" class="btn btn-primary">
+                      Upload Course
+                    </button>
+                  </form>
+                </div>
+              </div>
+              <hr class="invis" />
+            </div>
+          </div>
+          <hr class="invis" />
+        </div>
+      </section>
+      <footer class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <p>&copy; BloomLearn</p>
+                </div>
+                <div class="col-md-6 text-right">
+                  <button class="btn-start" style="float: right;">Donate</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="{% static 'js/jquery min js.js' %}"></script>
+    <!-- <script src="{% static 'js/bootstrap.min.jsretina.js' %}"></script> -->
+    <script>
+      eval(mod_pagespeed_gFRwwUbyVc);
+    </script>
+    <script>
+      eval(mod_pagespeed_rQwXk4AOUN);
+    </script>
+    <script>
+      eval(mod_pagespeed_U0OPgGhapl);
+    </script>
+    <script src="{% static 'js/carousel.jscustom.js' %}"></script>
+    <script>
+      eval(mod_pagespeed_6Ja02QZq$f);
+    </script>
+    <script>
+      eval(mod_pagespeed_KxQMf5X6rF);
+    </script>
+  </body>
+
+  <!-- course-account40:29  -->
+</html>
