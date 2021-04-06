@@ -51,6 +51,10 @@ def registration(request):
 def homepage(request):
     return render(request, 'teacher/home.html')
 
+
+def singleCourse(request):
+    return render(request, 'singleCourse/home.html')
+
 def courseHome(request):
     return render(request, 'teacher/courseHome.html')
 
