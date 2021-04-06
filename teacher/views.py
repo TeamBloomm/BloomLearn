@@ -16,7 +16,7 @@ def details(request):
             return redirect('teacher:homepage')
         else:
             teacher_data_form = TeacherRegistrationForm()
-            return render(request, 'teacher/details.html', {
+            return render(request, 'teacher/home.html', {
         'teacher_data_form': teacher_data_form,
         })
     else:
@@ -51,6 +51,13 @@ def registration(request):
 def homepage(request):
     return render(request, 'teacher/home.html')
 
+
+def singleCourse(request):
+    return render(request, 'teacher/singleCourse.html')
+
+def courseHome(request):
+    return render(request, 'teacher/courseHome.html')
+
 def signin(request):
     if request.user.is_authenticated:
         return redirect('teacher:homepage')
@@ -77,7 +84,7 @@ def simple_upload(request):
         file_form = FileUploadForm(request.POST, request.FILES)
         if file_form.is_valid():
             file_form.save()#commit=False)
-            return redirect('teacher:homepage')
+            return redirect('teacher:courseHome')
     else:
         file_form = FileUploadForm()
     return render(request, 'teacher/simple_upload.html', {

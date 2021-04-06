@@ -23,11 +23,11 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/A style css.css'%}" />
   </head>
   <body>
-    <!-- <div id="loader">
+    <div id="loader">
       <div class="loader-container">
         <img src="{% static 'images/site.gif'%}" alt="" class="loader-site" />
       </div>
-    </div> -->
+    </div>
     <div id="wrapper">
       <section class="grey page-title">
         <div class="container">
@@ -67,12 +67,10 @@
                 <p><a href="#">My Courses</a><small class="label label-primary">0</small></p>
                 <hr />
                 <p>
-                  Messages
-                  <small class="label label-primary"><a href="#">0</a></small>
+                  <a href="{% url 'bookSession:mySessions' %}">Booked Sessions</a>
                 </p>
                 <hr />
-                <p>
-                  Booked Sessions
+                <p><a href="{% url 'bookSession:addSession' %}">New Session</a>
                   <small class="label label-primary"><a href="#">0</a></small>
                 </p>
                 <hr />
@@ -84,8 +82,8 @@
             <div id="course-content" class="col-md-9">
               <div class="course-description">
                 <h3 class="course-title">Welcome Onboard as the Latest BloomLearn Student</h3>
-                <p>You have no courses yet, Start by browsing through our <a href="{% url 'child:homepage' %}" style="color: blue;">course catalog</a> or check out our amazing 
-                  and vetted <a href="{% url 'child:homepage' %}"  style="color: blue;">teachers</a> and book a on-on-one session with them or take their courses. Dive in!!!</p>
+                <p>You have no courses yet, Start by browsing through our <a href="{% url 'child:courseList' %}" style="color: blue;">course catalog</a> or check out our amazing 
+                  and vetted <a href="{% url 'child:courseTeachers' %}"  style="color: blue;">teachers</a> and book a on-on-one session with them or take their courses. Dive in!!!</p>
                 </div>
               </div>
               <hr class="invis" />

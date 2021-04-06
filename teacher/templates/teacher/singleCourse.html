@@ -1,0 +1,255 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1"/>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <meta name="keywords" content="" />
+    <title>My Dashboard </title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}"/>
+    <script src="https://kit.fontawesome.com/21af872b52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/A settings css pagespeed.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/A fonts font-awesome-4.3.0.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A menu css pagespeed.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A carousel css bbbpress css.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A style css.css'%}" />
+  </head>
+  <body>
+    <!-- <div id="loader">
+      <div class="loader-container">
+        <img src="{% static 'images/site.gif' %}" alt="" class="loader-site" />
+      </div>
+    </div> -->
+    <div id="wrapper">
+      <div id="wrapper">
+      <section class="grey page-title">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-6 text-left">
+              <h1>My Dashboard</h1>
+            </div>
+            <div class="col-md-6 text-right">
+              <div class="bread">
+                <ol class="breadcrumb">
+                  <li><a href="{% url 'landing:select_role' %}">Home</a></li>
+                  <li class="active">Dashboard</li>
+                </ol>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="white section">
+        <div class="container">
+          <div class="row">
+            <div id="course-left-sidebar" class="col-md-3">
+              <div class="course-image-widget">
+                <img
+                  src="{% static 'images/xstudent_06.png.pagespeed.ic.M4STWuf1XS.png' %}"
+                  alt=""
+                  class="img-responsive"
+                />
+              </div>
+              <div class="course-meta">
+                <p>BLOOMER</p>
+                <hr />
+                <p>
+                  <a href="{% url 'teacher:details' %}">Edit Profile</a>
+                </p>
+                <hr />
+                <p><a href="#">My Courses</a><small class="label label-primary">0</small></p>
+                <hr />
+                <p><a href="{% url 'teacher:simple_upload' %}">Create New Course</a></p>
+                <hr />
+                <p>
+                  <a href="{% url 'bookSession:mySlots' %}">Open Slots</a>
+                </p>
+                <hr />
+                <p><a href="{% url 'bookSession:mySessions' %}">Booked Sessions</a>
+                  <small class="label label-primary"><a href="#">0</a></small>
+                </p>
+                <hr />
+                <p>
+                  <a href="{% url 'teacher:signout' %}">Logout</a>
+              </p>
+              </div>
+            </div>
+            <div id="course-content" class="col-md-9">
+                <div class="course-description">
+                  
+                  
+                  <section class="gre sectio">
+                      <div class="container">
+                        <div class="row">
+                          <div id="content" class="col-md-8 col-sm-8 col-xs-12">
+                            <div class="blog-wrapper">
+                              <div class="row second-bread">
+                                <div class="col-md-6 text-left">
+                                  <h1>Course Title</h1>
+                                </div>
+                                <div class="col-md-6 text-right">
+                                  <div class="bread">
+                                    <ol class="breadcrumb">
+                                      <li><a href="#">Home</a></li>
+                                      <li class="active">Next</li>
+                                    </ol>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="blog-wrapper single-blog-wrapper">
+                              <div class="blog-title">
+                                <a class="category_title" href="#" title=""
+                                  >Chapter 1</a
+                                >
+                                <h2>
+                                  <a href="single.html" title=""
+                                    >Best Learning Management System for Ever</a
+                                  >
+                                </h2>
+                                <div class="post-meta">
+                                  <span>
+                                    <i class="fa fa-user"></i>
+                                    <a href="#">Jenny Doe</a>
+                                  </span>
+                                  <span>
+                                    <i class="fa fa-tag"></i>
+                                    <a href="#">Galleries</a>
+                                  </span>
+                                  <span>
+                                    <i class="fa fa-comments"></i>
+                                    <a href="#">21 Comments</a>
+                                  </span>
+                                  <span>
+                                    <i class="fa fa-eye"></i>
+                                    <a href="#">123 Views</a>
+                                  </span>
+                                  <span>
+                                    <i class="fa fa-clock-o"></i>
+                                    <a href="#">21 Aug 2015</a>
+                                  </span>
+                                </div>
+                              </div>
+                              <div class="blog-image">
+                                <a href="single.html" title=""
+                                  ><img
+                                    src="{% static 'images/xblog_01.jpg.pagespeed.ic.2jVY1j1OMe.jpg' %}"
+                                    alt=""
+                                    class="img-responsive"
+                                /></a>
+                              </div>
+                              <div class="blog-desc">
+                                <p>
+                                  Lorem Ipsum is simply dummy text of the printing and
+                                  typesetting industry. Lorem Ipsum has been the industry's
+                                  standard dummy text ever since the 1500s, when an unknown
+                                  printer took.Lorem Ipsum is simply dummy text of the
+                                  printing and typesetting industry. Lorem Ipsum has been the
+                                  industry's standard dummy text ever since the 1500s, when an
+                                  unk...
+                                </p>
+                                <p>
+                                  Lorem Ipsum is simply dummy text of the printing and
+                                  typesetting industry. Lorem Ipsum has been the industry's
+                                  standard dummy text ever since the 1500s, when an unknown
+                                  printer took.Lorem Ipsum is simply dummy text of the
+                                  printing and typesetting industry. Lorem Ipsum has been the
+                                  industry's standard dummy text ever since the 1500s, when an
+                                  unk...
+                                </p>
+                                <blockquote>
+                                  Lorem Ipsum is simply dummy text of the printing and
+                                  typesetting industry. Lorem Ipsum has been the industry's
+                                  standard dummy text
+                                </blockquote>
+                                <p>
+                                  Lorem Ipsum is simply dummy text of the printing and
+                                  typesetting industry. Lorem Ipsum has been the industry's
+                                  standardrd dummy text ever since the 1500s, when an unknown
+                                  printer took.Lorem Ipsum is simply dummy text of the
+                                  printing and typesetting industry. Lorem Ipsum has been the
+                                  industry's standard dummy text ever since the 1500s, when an
+                                  unk.. dummy text ever since the 1500s, when an unknown
+                                  printer took.Lorem Ipsum is simply dummy text of the
+                                  printing and typesetting industry. Lorem Ipsum has been the
+                                  industry's standard dummy text ever since the 1500s, when an
+                                  unk...
+                                </p>
+                                <p>
+                                  Lorem Ipsum is simply dummy text of the printing and
+                                  typesetting industry. Lorem Ipsum has been the industry's
+                                  standardrd dummy text ever since the 1500s, when an unknown
+                                  printer took.Lorem Ipsum is simply dummy text of the
+                                  printing and typesetting industry. Lorem Ipsum has been the
+                                  industry's standard dummy text ever since the 1500s, when an
+                                  unk.. dummy text ever since the 1500s, when an unknown
+                                  printer took.Lorem Ipsum is simply dummy text of the
+                                  printing and typesetting industry. Lorem Ipsum has been the
+                                  industry's standard dummy text ever since the 1500s, when an
+                                  unk...
+                                </p>
+                                <hr class="invis" />
+                                <div class="tags">
+                                  <a href="#">design</a>
+                                  <a href="#">development</a>
+                                  <a href="#">video tuts</a>
+                                  <a href="#">sexy tag</a>
+                                </div>
+                              </div>
+                            </div>
+                            <hr class="invis" />
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </div>
+                <hr class="invis" />
+              </div>
+            </div>
+            <hr class="invis" />
+          </div>
+        </section>
+      <footer class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <p>&copy; BloomLearn</p>
+                </div>
+                <div class="col-md-6 text-right">
+                  <button class="btn-start" style="float: right;">Donate</button>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="{% static 'js/jquery min js.js' %}"></script>
+    <!-- <script src="{% static 'js/bootstrap.min.jsretina.js' %}"></script> -->
+    <script>
+      eval(mod_pagespeed_gFRwwUbyVc);
+    </script>
+    <script>
+      eval(mod_pagespeed_rQwXk4AOUN);
+    </script>
+    <script>
+      eval(mod_pagespeed_U0OPgGhapl);
+    </script>
+    <script src="{% static 'js/carousel.jscustom.js' %}"></script>
+    <script>
+      eval(mod_pagespeed_6Ja02QZq$f);
+    </script>
+    <script>
+      eval(mod_pagespeed_KxQMf5X6rF);
+    </script>
+  </body>
+
+  <!-- course-account40:29  -->
+</html>

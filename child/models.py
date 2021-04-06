@@ -41,7 +41,7 @@ class ChildData(models.Model):
     guardian_last_name = models.CharField(max_length = 100,)
     guardian_email_address = models.EmailField(max_length=100,)
     published_date = models.DateTimeField(auto_now_add=True, ) 
-    subjects = models.ArrayField( model_container=Subject,)
+    subjects = models.CharField(max_length=100,)
     Courses = models.ArrayReferenceField(to=CourseData, on_delete=models.CASCADE, )
     objects = models.DjongoManager()
 

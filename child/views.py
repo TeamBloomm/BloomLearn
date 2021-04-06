@@ -14,7 +14,7 @@ def details(request):
         else:
             print('failed')
             child_data_form = ChildRegistrationForm()
-            return render(request, 'child/details.html', {
+            return render(request, 'child/home.html', {
         'child_data_form': child_data_form,
         })
     else:
@@ -49,6 +49,12 @@ def registration(request):
 def homepage(request):
     return render(request, 'child/home.html')
 
+def courseTeachers(request):
+    return render(request, 'child/courseTeachers.html')
+
+def courseList(request):
+    return render(request, 'child/courseList.html')
+
 def signin(request):
     if request.user.is_authenticated:
         return redirect('child:homepage')
@@ -69,6 +75,3 @@ def signin(request):
 
 def signout(request):
     return logout_then_login(request, login_url='child:signin')
-
-def course_list(request):
-    return render(request, 'child/course-list.html')

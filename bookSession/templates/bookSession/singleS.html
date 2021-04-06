@@ -22,27 +22,19 @@
 
     <title>Bloom | Sessions</title>
 </head>
-
 <body>
-<h2>My Sessions</h2>
-{% block content %}
-    {% for s in sessions %}
-    <!-- <p>{{slot.user}}</p> -->
-    <p>Slot 1:</p>
+    {% block content %}
+    <p>Booked Session</p>
     <ul>
-        <li>{{s.title}}</li>
-        <li>{{s.slot}}</li>
-        <li>{{s.sessionURL}}</li>
+        <li>{{session.slot}}</li>
+        <li>{{session.title}}</li>
+        <li>{{session.sessionURL}}</li>
     </ul>
-    {% endfor %}
         <div>
-            <button  style="border: #007bff 2px solid;margin-bottom: 2%; border-radius: 5px;"><a href="{% url 'bookSession:createSession' %}" target="_self">New Session</a></button>
+            <button  style="border: #007bff 2px solid; margin-bottom: 2%; border-radius: 5px;"><a href="{% url 'bookSession:addSession' %}" target="_self">Add another session</a></button>
         </div>
         <div>
-            <button class="btn-donate"   style="border: #007bff 2px solid; border-radius: 5px;"><a href="{% url 'bookSession:mySlots' %}" target="_self">My Sessions</a></button>
-        </div>
-        <div>
-            <button class="btn-donate"   style="border: #007bff 2px solid; border-radius: 5px;"><a href="{% url 'child:homepage' %}" target="_self">Go back home</a></button>
+            <button style="border: #007bff 2px solid;  border-radius: 5px;"><a href="{% url 'bookSession:mySessions' %}" target="_self">My Slots</a></button>
         </div>
 {% endblock %}
 </body>

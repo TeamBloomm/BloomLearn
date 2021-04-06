@@ -2,18 +2,20 @@ from datetime import time
 from django.db.models.fields import TimeField
 from bookSession.models import *
 from django.http import HttpResponse
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, redirect
 from child.models import *
 from teacher.models import *
+from datetime import datetime as dt
 
 from bookSession.forms import SessionForm, timeSlotsForm
 # Create your views here.
-
+from pyzoom import ZoomClient
+client = ZoomClient('DoqYmeizR3SCqhaOWllLZw', 'u77RUz9zNcmwyaQx9g4a9K9oZCCDXNK7EaBk')
 
 #  --- both teacher and child
 def mySessions(request):
-    Session = Session.objects.filter(creationDate=timezone.now()).order_by('published_date')
-    return render(request, 'bookSession/mySessions.html',  {'Session': Session})
+    sessions = Session.objects.filter(creationDate=timezone.now()).order_by('title')
+    return render(request, 'bookSession/mySessions.html',  {'sessions': sessions})
 
 def cancelSession(request, id):
     obj=Session.objects.get(sessionID=id)
@@ -23,9 +25,15 @@ def cancelSession(request, id):
 def singleSession(request):
     return render(request, 'bookSession/singleSession.html')
 
+def singleS(request):
+    return render(request, 'bookSession/singleS.html')
+
 def mySlots(request):
+    # slots = timeSlots.objects.all()
+    # slot = {"slots": slots}
+    # return render_to_response("login/profile.html", stu)
     slots = timeSlots.objects.filter(slotDate=timezone.now()).order_by('slotDate')
-    return render(request, 'bookSession/mySlots.html', {'slots': slots})
+    return render(request, 'bookSession/mySlots.html',{'slots': slots})
 
 #  --- teacher features
 def createSession(request): # creating a new slot
@@ -45,9 +53,11 @@ def addSession(request): #book session
     if request.method == "POST":
         child_session_form = SessionForm(request.POST)
         if child_session_form.is_valid():
-            child_session_form.user = request.user
-            child_session_form.save()
-            return redirect('book_session')
+            session = child_session_form.save(commit=False)
+            session.sessionURL = client.meetings.create_meeting('Auto created 1', start_time=dt.now().isoformat(), duration_min=40, password='not-secure')
+            session.user = request.user
+            session.save()
+            return render(request, 'bookSession/singleS.html', {'session' :session,})
     else:
         child_session_form = SessionForm()
     return render(request, 'bookSession/bookSession.html', {'child_session_form' : child_session_form,})

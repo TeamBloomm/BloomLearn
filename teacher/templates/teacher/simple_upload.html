@@ -65,25 +65,24 @@
                 <p>BLOOMER</p>
                 <hr />
                 <p>
-                    <a href="{% url 'teacher:details' %}">Edit Profile</a>
-                  </p>
+                  <a href="{% url 'teacher:details' %}">Edit Profile</a>
+                </p>
                 <hr />
-                <p><a href="{% url 'teacher:homepage' %}">My Courses</a><small class="label label-primary">0</small></p>
+                <p><a href="{% url 'teacher:courseHome' %}">My Courses</a><small class="label label-primary">0</small></p>
+                <hr />
+                <p><a href="{% url 'teacher:simple_upload' %}">Create New Course</a></p>
                 <hr />
                 <p>
-                  Messages
+                  <a href="{% url 'bookSession:mySlots' %}">Open Slots</a>
+                </p>
+                <hr />
+                <p><a href="{% url 'bookSession:mySessions' %}">Booked Sessions</a>
                   <small class="label label-primary"><a href="#">0</a></small>
                 </p>
                 <hr />
                 <p>
-                  Booked Sessions
-                  <small class="label label-primary"><a href="#">0</a></small>
-                </p>
-                <hr />
-                <p>
-                    <a href="{% url 'teacher:signout' %}">Logout</a>
-                </p>
-                <hr />
+                  <a href="{% url 'teacher:signout' %}">Logout</a>
+              </p>
               </div>
             </div>
             <div id="course-content" class="col-md-9">
@@ -123,9 +122,7 @@
                       <div class="course-description">
                         <h3 class="course-title">Course Content</h3>
                         <p>{% render_field file_form.filepath type="file" class+="form-control" %}</p> 
-                    <button type="submit" class="btn btn-primary">
-                      Upload Course
-                    </button>
+                        <input type="submit" value="Upload Course" type="submit" class="btn btn-primary">
                   </form>
                 </div>
               </div>

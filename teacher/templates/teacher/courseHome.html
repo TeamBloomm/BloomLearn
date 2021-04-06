@@ -22,11 +22,11 @@
     <link rel="stylesheet" type="text/css" href="{% static 'css/A style css.css'%}" />
   </head>
   <body>
-    <div id="loader">
+    <!-- <div id="loader">
       <div class="loader-container">
         <img src="{% static 'images/site.gif' %}" alt="" class="loader-site" />
       </div>
-    </div>
+    </div> -->
     <div id="wrapper">
       <div id="wrapper">
       <section class="grey page-title">
@@ -64,7 +64,7 @@
                   <a href="{% url 'teacher:details' %}">Edit Profile</a>
                 </p>
                 <hr />
-                <p><a href="{% url 'teacher:courseHome' %}">My Courses</a><small class="label label-primary">0</small></p>
+                <p><a href="#">My Courses</a><small class="label label-primary">0</small></p>
                 <hr />
                 <p><a href="{% url 'teacher:simple_upload' %}">Create New Course</a></p>
                 <hr />
@@ -84,7 +84,26 @@
             <div id="course-content" class="col-md-9">
               <div class="course-description">
                 <h3 class="course-title">Welcome Onboard as the Latest BloomLearn Tutor</h3>
-                <p>You have no courses yet, Start by creating your first <span><a href="{% url 'teacher:simple_upload' %}" style="color: blue;">course.</a></span></p>
+                <div>
+                    <div class="shop-item-list entry">
+                        <div class="">
+                            <img src="{% static 'images/xcourse_04.png.pagespeed.ic.2rIKmUwjA7.png' %}" alt="">
+                            <div class="magnifier">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    <div class="shop-list-desc">
+
+                        <h4><a href="">Communication Skills</a></h4>
+                        <div class="shopmeta">
+                            <span class="pull-left"><strong>Course Price:</strong> Free</span>
+                        </div>
+                        <hr class="invis clearfix">
+                        <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us.</p>
+                        <a href="{% url 'teacher:singleCourse' %}" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
                 </div>
               </div>
               <hr class="invis" />

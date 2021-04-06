@@ -10,4 +10,5 @@ urlpatterns = [
     path('mySessions/', views.mySessions, name='mySessions'),
     path('singleSession/', views.singleSession, name='singleSession'),
     path('mySlots/', views.mySlots, name='mySlots'),
+    path('singleS/', views.singleS, name='singleS'),
 ]
