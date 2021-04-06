@@ -5,18 +5,21 @@ from .forms import *
 # Create your views here.
 
 def home(request):
-    forums=forum.objects.all()
-    count = forums.count()
-    discussions=[]
-    for i in forums:
-        discussions.append(i.discussion_set.all())
+    try:
+        forums=forum.objects.all()
+        count = forums.count()
+        discussions=[]
+        for i in forums:
+            discussions.append(i.discussion_set.all())
 
-    context = {
-        'forums':forums,
-        'count':count,
-        'discussions':discussions,
-    }
-    return render(request,'discussionForum:home', context)
+        context = {
+            'forums':forums,
+            'count':count,
+            'discussions':discussions,
+        }
+        return render(request,'discussionForum/home.html', context)
+    except:
+        return redirect('discussionForum:addInForum')
 
 def addInForum(request):
     form = CreateInForum()
@@ -26,7 +29,7 @@ def addInForum(request):
             form.save()
             return redirect('discussionForum:home')
     context = {'form':form}
-    return render(request,'discussionForum:addInForum')
+    return render(request,'discussionForum/addInForum.html', context)
 
 def addInDiscussion(request):
     form =CreateInDiscussion()
@@ -36,4 +39,4 @@ def addInDiscussion(request):
             form.save()
             return redirect('discussionForum:home')
     context = {'form': form}
-    return render(request,'discussionForum:addInDiscussion')
+    return render(request,'discussionForum/addInDiscussion.html', context)
