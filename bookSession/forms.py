@@ -19,12 +19,11 @@ class TimeInput(forms.TimeInput):
 class SessionForm(forms.ModelForm):
     class Meta:
         model = Session
-        fields = ('title', 'sessionDate', 'duration', 'teacher')
+        fields = ('title', 'slot')
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields["sessionDate"].widget = DateInput()
-        self.fields["sessionTime"].widget = TimeInput()
+        # self.fields["duration"].widget = TimeInput()
 
 class timeSlotsForm(forms.ModelForm):
     class Meta:
@@ -35,4 +34,3 @@ class timeSlotsForm(forms.ModelForm):
         super().__init__(*args, **kwargs)
         self.fields["slotDate"].widget = DateInput()
         self.fields["startTime"].widget = TimeInput()
-        self.fields["endTime"].widget = TimeInput()

@@ -49,7 +49,8 @@ INSTALLED_APPS = [
     'bookSession.apps.BooksessionConfig',
     'storages',
     'widget_tweaks',
-    'discussionForum.apps.DiscussionforumConfig'
+    'discussionForum.apps.DiscussionforumConfig',
+    'pyzoom'
 ]
 
 MIDDLEWARE = [
@@ -159,3 +160,4 @@ AZURE_ACCOUNT_NAME = "bloomlearnstore"
 AZURE_CUSTOM_DOMAIN = f'{AZURE_ACCOUNT_NAME}.blob.core.windows.net'
 STATIC_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{STATIC_LOCATION}/'
 MEDIA_URL = f'https://{AZURE_CUSTOM_DOMAIN}/{MEDIA_LOCATION}/'
+

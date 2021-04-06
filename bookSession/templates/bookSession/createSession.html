@@ -17,10 +17,13 @@
     <!-- Style -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
 
-    <title>Bloom | Sign In</title>
+    <title>Bloom | New Slot</title>
 </head>
 
 <body>
+  <div>
+    <button class="btn-donate"   style="border: #007bff 2px solid; border-radius: 5px;"><a href="{% url 'teacher:homepage' %}" target="_self">Go back home</a></button>
+</div>
 <h1 style="text-align: center; padding-top: 10%;">Create Session</h1>
 <form  method="post" style="padding: 0 15%;">
     {% csrf_token %}
