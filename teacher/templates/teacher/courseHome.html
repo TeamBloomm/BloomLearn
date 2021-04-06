@@ -1,21 +1,17 @@
 {% load static %}
-{% load widget_tweaks %}
 
 <!DOCTYPE html>
 <html lang="en">
-
-  <!-- course-account40:17  -->
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta
       name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"
-    />
+      content="width=device-width, initial-scale=1, maximum-scale=1"/>
     <meta name="description" content="" />
     <meta name="author" content="" />
     <meta name="keywords" content="" />
-    <title>Upload Course</title>
+    <title>My Dashboard </title>
     <link rel="shortcut icon" href="{% static 'images/favicon.png' %}"/>
     <script src="https://kit.fontawesome.com/21af872b52.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -28,22 +24,22 @@
   <body>
     <!-- <div id="loader">
       <div class="loader-container">
-        <img src="{% static 'images/site.gif'%}" alt="" class="loader-site" />
+        <img src="{% static 'images/site.gif' %}" alt="" class="loader-site" />
       </div>
     </div> -->
     <div id="wrapper">
+      <div id="wrapper">
       <section class="grey page-title">
         <div class="container">
           <div class="row">
             <div class="col-md-6 text-left">
-              <h1>Upload </h1>
+              <h1>My Dashboard</h1>
             </div>
             <div class="col-md-6 text-right">
               <div class="bread">
                 <ol class="breadcrumb">
-                  <li><a href="{% url 'teacher:homepage' %}">Home</a></li>
-                  <!-- <li><a href="#">Courses</a></li> -->
-                  <li class="active">Upload a Course</li>
+                  <li><a href="{% url 'landing:select_role' %}">Home</a></li>
+                  <li class="active">Dashboard</li>
                 </ol>
               </div>
             </div>
@@ -87,45 +83,27 @@
             </div>
             <div id="course-content" class="col-md-9">
               <div class="course-description">
-                <h3 class="course-title">Start a new Course</h3>
-                <div class="edit-profile">
-                  <form method="post" enctype="multipart/form-data">
-                    {% csrf_token %} 
-                    <div class="form-group">
-                      <label>Course Name</label>
-                      <p>{% render_field file_form.name type="text" class+="form-control" %}</p> 
+                <h3 class="course-title">Welcome Onboard as the Latest BloomLearn Tutor</h3>
+                <div>
+                    <div class="shop-item-list entry">
+                        <div class="">
+                            <img src="{% static 'images/xcourse_04.png.pagespeed.ic.2rIKmUwjA7.png' %}" alt="">
+                            <div class="magnifier">
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label>Course Description</label>
-                        <p>{% render_field file_form.course type="text" class+="form-control" %}</p> 
-                      </div>
-                      <div class="form-group">
-                        <label>Course Grade</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder=""
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label>How many students can your course hold?</label>
-                        <input
-                          type="text"
-                          class="form-control"
-                          placeholder=""
-                        />
-                      </div>
-                      <div class="form-group">
-                        <label>Upload Course Cover Image</label>
-                        <input type="file" class="btn btn-primary" />
-                      </div>
-                      <div class="course-description">
-                        <h3 class="course-title">Course Content</h3>
-                        <p>{% render_field file_form.filepath type="file" class+="form-control" %}</p> 
-                        <a href="{% url 'teacher:homepage' %}"><input type="submit" value="Submit" class="btn btn-block btn-primary"></a><button type="submit" class="btn btn-primary">
-                      Upload Course
-                    </button></a>
-                  </form>
+                </div>
+                    <div class="shop-list-desc">
+
+                        <h4><a href="">Communication Skills</a></h4>
+                        <div class="shopmeta">
+                            <span class="pull-left"><strong>Course Price:</strong> Free</span>
+                        </div>
+                        <hr class="invis clearfix">
+                        <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us.</p>
+                        <a href="" class="btn btn-default">Learn More</a>
+                    </div>
+                </div>
                 </div>
               </div>
               <hr class="invis" />

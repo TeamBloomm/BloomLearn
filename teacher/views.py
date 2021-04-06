@@ -51,6 +51,9 @@ def registration(request):
 def homepage(request):
     return render(request, 'teacher/home.html')
 
+def courseHome(request):
+    return render(request, 'teacher/courseHome.html')
+
 def signin(request):
     if request.user.is_authenticated:
         return redirect('teacher:homepage')
@@ -80,6 +83,6 @@ def simple_upload(request):
             return redirect('teacher:homepage')
     else:
         file_form = FileUploadForm()
-    return render(request, 'teacher/simple_upload.html', {
+    return render(request, 'teacher/courseHome.html', {
         'file_form': file_form
     })
