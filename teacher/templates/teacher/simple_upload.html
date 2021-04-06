@@ -122,9 +122,7 @@
                       <div class="course-description">
                         <h3 class="course-title">Course Content</h3>
                         <p>{% render_field file_form.filepath type="file" class+="form-control" %}</p> 
-                        <a href="{% url 'teacher:homepage' %}"><button type="submit" class="btn btn-primary">
-                      Upload Course
-                    </button></a>
+                        <input type="submit" value="Upload Course" type="submit" class="btn btn-primary">
                   </form>
                 </div>
               </div>
