@@ -14,7 +14,7 @@ def details(request):
         else:
             print('failed')
             child_data_form = ChildRegistrationForm()
-            return render(request, 'child/details.html', {
+            return render(request, 'child/home.html', {
         'child_data_form': child_data_form,
         })
     else:

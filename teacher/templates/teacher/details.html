@@ -45,7 +45,7 @@
                             <p>{% render_field teacher_data_form.country type="username" class+="form-control" %}</p>
                             <label >State or County</label>
                             <p>{% render_field teacher_data_form.state type="username" class+="form-control" %}</p>
-                            <input type="submit" value="Submit" class="btn btn-block btn-primary">
+                            <a href="{% url 'teacher:homepage' %}"  style="color: blue;"></a><input type="submit" value="Submit" class="btn btn-block btn-primary"></a>
     </form>
     </div>
     </div>

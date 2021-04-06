@@ -16,7 +16,7 @@ def details(request):
             return redirect('teacher:homepage')
         else:
             teacher_data_form = TeacherRegistrationForm()
-            return render(request, 'teacher/details.html', {
+            return render(request, 'teacher/home.html', {
         'teacher_data_form': teacher_data_form,
         })
     else:

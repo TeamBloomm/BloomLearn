@@ -65,25 +65,24 @@
                 <p>BLOOMER</p>
                 <hr />
                 <p>
-                    <a href="{% url 'teacher:details' %}">Edit Profile</a>
-                  </p>
+                  <a href="{% url 'teacher:details' %}">Edit Profile</a>
+                </p>
                 <hr />
-                <p><a href="{% url 'teacher:homepage' %}">My Courses</a><small class="label label-primary">0</small></p>
+                <p><a href="#">My Courses</a><small class="label label-primary">0</small></p>
+                <hr />
+                <p><a href="{% url 'teacher:simple_upload' %}">Create New Course</a></p>
                 <hr />
                 <p>
-                  Messages
+                  <a href="{% url 'bookSession:mySlots' %}">Open Slots</a>
+                </p>
+                <hr />
+                <p><a href="{% url 'bookSession:mySessions' %}">Booked Sessions</a>
                   <small class="label label-primary"><a href="#">0</a></small>
                 </p>
                 <hr />
                 <p>
-                  Booked Sessions
-                  <small class="label label-primary"><a href="#">0</a></small>
-                </p>
-                <hr />
-                <p>
-                    <a href="{% url 'teacher:signout' %}">Logout</a>
-                </p>
-                <hr />
+                  <a href="{% url 'teacher:signout' %}">Logout</a>
+              </p>
               </div>
             </div>
             <div id="course-content" class="col-md-9">

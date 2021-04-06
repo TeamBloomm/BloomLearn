@@ -13,7 +13,7 @@ class timeSlots(models.Model):
     slotDate = models.DateField()
 
     def __str__(self):
-        title = 'Book Slot on: ' + str(self.slotDate) + ' at: ' + str(self.startTime)
+        title = 'Slot on: ' + str(self.slotDate) + ' at: ' + str(self.startTime)
         return title
 
 class Session(models.Model):
