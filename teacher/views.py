@@ -53,7 +53,7 @@ def homepage(request):
 
 
 def singleCourse(request):
-    return render(request, 'singleCourse/home.html')
+    return render(request, 'teacher/singleCourse.html')
 
 def courseHome(request):
     return render(request, 'teacher/courseHome.html')
@@ -84,9 +84,9 @@ def simple_upload(request):
         file_form = FileUploadForm(request.POST, request.FILES)
         if file_form.is_valid():
             file_form.save()#commit=False)
-            return redirect('teacher:homepage')
+            return redirect('teacher:courseHome')
     else:
         file_form = FileUploadForm()
-    return render(request, 'teacher/courseHome.html', {
+    return render(request, 'teacher/simple_upload.html', {
         'file_form': file_form
     })

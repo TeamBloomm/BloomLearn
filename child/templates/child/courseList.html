@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -8,74 +9,22 @@
     <meta name="author" content="">
     <meta name="keywords" content="">
     <title> Course List</title>
-    <link rel="shortcut icon" href="img/favicon.png"/>
-    <link rel="stylesheet" type="text/css" href="rs-plugin/css/A.settings.css.pagespeed.cf.xeOyGChsgq.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="A.fonts%2c%2c_font-awesome-4.3.0%2c%2c_css%2c%2c_font-awesome.min.css%2bcss%2c%2c_bootstrap.css%2bcss%2c%2c_animate.css%2cMcc.kSNwpaaMDX.css.pagespeed.cf.w2G3xGgFf0.css" />
-    <link rel="stylesheet" type="text/css" href="css/A.menu.css.pagespeed.cf.0_hLwXzYkZ.css">
-    <link rel="stylesheet" type="text/css" href="css/A.carousel.css.pagespeed.cf.VktteGiLwl.css">
-    <link rel="stylesheet" type="text/css" href="A.style.css%2bcss%2c%2c_custom.css%2cMcc.HvWh1qoob-.css.pagespeed.cf.pWH5huNcWh.css" />
-</head>
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}"/>
+    <script src="https://kit.fontawesome.com/21af872b52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/A settings css pagespeed.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/A fonts font-awesome-4.3.0.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A menu css pagespeed.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A carousel css bbbpress css.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A style css.css'%}" />
+  </head>
 
 <body>
     <div id="loader">
         <div class="loader-container">
-            <img src="images/site.gif" alt="" class="loader-site">
+            <img src="{% static 'images/site.gif'%}" alt="" class="loader-site">
         </div>
     </div>
-    <!-- <header class="header">
-        <div class="container">
-            <div class="hovermenu ttmenu">
-                <div class="navbar navbar-default" role="navigation">
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="fa fa-bars"></span>
-                        </button>
-                        <div class="logo">
-                            <img src="img/logo.png" alt="logo" class="navbar-brand">
-                        </div>
-                    </div>
-                    <div class="navbar-collapse collapse">
-                        <ul class="nav navbar-nav">
-                            
-                            <li class="dropdown ttmenu-half"><a href="#" data-toggle="dropdown" class="dropdown-toggle active">Courses <b class="fa fa-angle-down"></b></a>
-                                <ul class="dropdown-menu">
-                                    <li>
-                                        <div class="ttmenu-content">
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="box">
-                                                        <ul>
-                                                            ¨
-                                                            
-                                                            <li><a href="course-filterable.html">Courses Filterable</a></li>
-                                                            <li><a href="course-single.html">Single Course</a></li>
-                                                            <li><a href="course-achievements.html">Achievements</a></li>
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="box">
-                                                        <ul>
-                                                            <li><a href="course-instructors.html">Course Instructors</a></li>
-                                                            
-                                                        </ul>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                        <ul class="nav navbar-nav navbar-right">
-                            <li><a class="btn btn-primary" href="course-account.html"><i class="fa fa-sign-in"></i> Profile</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header> -->
     <section class="grey page-title">
         <div class="container">
             <div class="row">
@@ -85,9 +34,10 @@
                 <div class="col-md-6 text-right">
                     <div class="bread">
                         <ol class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Courses</a></li>
-                            <li class="active">Course List Page</li>
+                            <li><a href="{% url 'child:homepage' %}">Home</a></li>
+                            <li><a href="active">Courses</a></li>
+                            <li class="{% url 'child:courseTeachers' %}">Course Instructors</li>
+
                         </ol>
                     </div>
                 </div>
@@ -100,7 +50,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="shop-item-list entry">
                         <div class="">
-                            <img src="upload/xcourse_01.png.pagespeed.ic.XTOvCuUmZu.png" alt="">
+                            <img src="{% static 'images/xcourse_01.png.pagespeed.ic.XTOvCuUmZu.png' %}" alt="">
                             <div class="magnifier">
                             </div>
                         </div>
@@ -108,13 +58,13 @@
                 </div>
                 <div class="col-md-8 col-md-8">
                     <div class="shop-list-desc">
-                        <h4><a href="course-single.html">Grade 4 English</a></h4>
+                        <h4><a href="">Grade 4 English</a></h4>
                         <div class="shopmeta">
                             <span class="pull-left"><strong>Course Price:</strong> Free </span>
                         </div>
                         <hr class="invis clearfix">
                         <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us.</p>
-                        <a href="course-single.html" class="btn btn-default btn-sm">Learn More</a>
+                        <a href="" class="btn btn-default btn-sm">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -122,7 +72,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="shop-item-list entry">
                         <div class="">
-                            <img src="upload/xcourse_02.png.pagespeed.ic.PL7Wu2UcSB.png" alt="">
+                            <img src="{% static 'images/xcourse_02.png.pagespeed.ic.PL7Wu2UcSB.png' %}" alt="">
                             <div class="magnifier">
                             </div>
                         </div>
@@ -131,14 +81,14 @@
                 <div class="col-md-8 col-md-8">
                     <div class="shop-list-desc">
                         <h4>
-                            <a href="course-single.html">Form 2 Literature</a>
+                            <a href="">Form 2 Literature</a>
                         </h4>
                         <div class="shopmeta">
                             <span class="pull-left"><strong>Course Price:</strong> $21.00 </span>
                         </div>
                         <hr class="invis clearfix">
                         <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us.</p>
-                        <a href="course-single.html" class="btn btn-default btn-sm">Learn More</a>
+                        <a href="" class="btn btn-default btn-sm">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -146,7 +96,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="shop-item-list entry">
                         <div class="">
-                            <img src="upload/xcourse_03.png.pagespeed.ic.8e1MyY5M7i.png" alt="">
+                            <img src="{% static 'images/xcourse_03.png.pagespeed.ic.8e1MyY5M7i.png' %}" alt="">
                             <div class="magnifier">
                             </div>
                         </div>
@@ -154,13 +104,13 @@
                 </div>
                 <div class="col-md-8 col-md-8">
                     <div class="shop-list-desc">
-                        <h4><a href="course-single.html">Grade 1 English</a></h4>
+                        <h4><a href="">Grade 1 English</a></h4>
                         <div class="shopmeta">
                             <span class="pull-left"><strong>Course Price:</strong> Free </span>
                         </div>
                         <hr class="invis clearfix">
                         <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us.</p>
-                        <a href="course-single.html" class="btn btn-default">Learn More</a>
+                        <a href="" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -168,7 +118,7 @@
                 <div class="col-md-4 col-sm-4 col-xs-12">
                     <div class="shop-item-list entry">
                         <div class="">
-                            <img src="upload/xcourse_04.png.pagespeed.ic.2rIKmUwjA7.png" alt="">
+                            <img src="{% static 'images/xcourse_04.png.pagespeed.ic.2rIKmUwjA7.png' %}" alt="">
                             <div class="magnifier">
                             </div>
                         </div>
@@ -176,14 +126,14 @@
                 </div>
                 <div class="col-md-8 col-md-8">
                     <div class="shop-list-desc">
-                        <h4><a href="course-single.html">Communication Skills</a></h4>
+                        <h4><a href="">Communication Skills</a></h4>
                         <div class="shopmeta">
                             <span class="pull-left"><strong>Course Price:</strong> Free</span>
                             
                         </div>
                         <hr class="invis clearfix">
                         <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us.</p>
-                        <a href="course-single.html" class="btn btn-default">Learn More</a>
+                        <a href="" class="btn btn-default">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -203,8 +153,8 @@
         </div>
     </footer>
     </div>
-    <script src="js/jquery.min.js.pagespeed.jm.iDyG3vc4gw.js"></script>
-    <script src="js/bootstrap.min.js%2bretina.js%2bwow.js.pagespeed.jc.pMrMbVAe_E.js"></script>
+    <script src="{% static 'js/jquery min js.js'  %}"></script>
+    <!-- <script src="js/bootstrap.min.js%2bretina.js%2bwow.js.pagespeed.jc.pMrMbVAe_E.js"></script> -->
     <script>
         eval(mod_pagespeed_gFRwwUbyVc);
     </script>
@@ -214,7 +164,7 @@
     <script>
         eval(mod_pagespeed_U0OPgGhapl);
     </script>
-    <script src="js/carousel.js%2bcustom.js.pagespeed.jc.nVhk-UfDsv.js"></script>
+    <script src="{% static 'js/carousel.jscustom.js' %}"></script>
     <script>
         eval(mod_pagespeed_6Ja02QZq$f);
     </script>

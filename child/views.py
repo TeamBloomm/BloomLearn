@@ -49,6 +49,12 @@ def registration(request):
 def homepage(request):
     return render(request, 'child/home.html')
 
+def courseTeachers(request):
+    return render(request, 'child/courseTeachers.html')
+
+def courseList(request):
+    return render(request, 'child/courseList.html')
+
 def signin(request):
     if request.user.is_authenticated:
         return redirect('child:homepage')
