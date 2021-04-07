@@ -74,7 +74,7 @@ def signin(request):
     else:
         form = AuthenticationForm(request.POST)
         return render(request, 'teacher/signin.html',{'form': form})
-    # return redirect('landing:landing_page')
+    return redirect('landing:landing_page')
 
 def signout(request):
     return logout_then_login(request, login_url='/teacher/sign-in')
