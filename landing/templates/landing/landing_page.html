@@ -1,0 +1,472 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<!-- index339:30 GMT -->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="">
+    <title> Bloom Learn | Online learning Platform</title>
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}"/>
+    <script src="https://kit.fontawesome.com/21af872b52.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/A settings css pagespeed.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'fonts/A fonts font-awesome-4.3.0.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A menu css pagespeed.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A carousel css bbbpress css.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/A style css.css'%}" />
+    <!-- <link rel="shortcut icon" href="{% static 'landing/images/favicon.png' %}" /> -->
+    <link rel="stylesheet" href="{% static 'landing/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/rs-plugin/css/A settings css pagespeed.css' %}" media="screen" />
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/fonts/A fonts font-awesome-4.3.0.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/A menu css pagespeed.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/A carousel css bbbpress css.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/A style css.css'%}" />
+</head>
+
+<body>
+    <div id="loader">
+        <div class="loader-container">
+            <img src="{% static 'landing/images/site.gif' %}" alt="My image" class="loader-site">
+        </div>
+    </div>
+
+    <div id="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="hovermenu ttmenu">s
+                    <div class="navbar navbar-default" role="navigation">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                      <span class="sr-only">Toggle navigation</span>
+                      <span class="fa fa-bars"></span>
+                    </button>
+                            <div class="logo">
+                                <img src="{% static 'landing/images/logo.png' %}" alt="logo" class="navbar-brand">
+                            </div>
+                        </div>
+                        <div class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li><a href="#skillup">About</a></li>
+                                <li class="dropdown ttmenu-half">
+                                    <a href="#topcourses">Courses</a>
+                                </li>
+                                <li class="dropdown ttmenu-half">
+                                    <a href="#testimonials">Testimonials</a>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                                <li>
+                                    <a class="btn btn-primary" href="{% url 'landing:select_role' %}"><i class="fa fa-sign-in"></i> Register Now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="slider-selection">
+            <div class="tp-banner-container" style="display: flex;">
+                <div class="banner-content" style="padding: 8%;">
+                    <h3 class="banner-text">Teach or Learn at the Comfort of your Home</h3>
+                    <p class="banner-text-small">We aim to aims to connect teachers and children from all over Africa. Join today and start your journey with us.</p>
+                    <button class="btn-start"><a href="{% url 'child:registration' %}">Start Learning</a></button>
+                    <button class="btn-donate"><a href="https://forms.office.com/r/Cq5HZU2CpP" target="_self">Donate</a></button>
+                </div>
+                <div style="padding-right: 5%;" >
+                    <img src="{% static 'images/header-image.png' %}" alt="header-image" width="400px" height="auto" >
+                </div>
+            </div>
+        </section>
+
+        <section class="white section nopaddingbottom" id="skillup">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h4>Skill Up with Us</h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-list">
+                            <i class="fa fa-graduation-cap alignleft"></i>
+                            <p><strong>Teach</strong></p>
+                            <p>
+                                We aim to connect teachers and children from all over Africa.Join today and start your journey with us.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-list">
+                            <i class="fa fa-shopping-cart alignleft"></i>
+                            <p><strong>Learn</strong></p>
+                            <p>
+                                We aim to connect teachers and children from all over Africa.Join today and start your journey with us.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6">
+                        <div class="feature-list">
+                            <i class="fa fa-question alignleft"></i>
+                            <p><strong>Donate</strong></p>
+                            <p>
+                                We aim to connect teachers and children from all over Africa.Join today and start your journey with us.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <hr class="invis" />
+                <!-- <hr class="invis" /> -->
+            </div>
+        </section>
+
+        <section class="white section" id="topcourses">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="section-title text-center">
+                            <h4>Top Courses</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="owl-featured-2" class="owl-custom" style="display: flex;">
+
+                    <div class="owl-featured" style="padding: 2%;">
+                        <div class="shop-item-list entry">
+                            <div class="">
+                                <img src="{% static 'landing/images/xcourse_01.png.pagespeed.ic.XTOvCuUmZu.png' %}" alt="">
+                                <div class="magnifier">
+                                </div>
+                            </div>
+                            <div class="shop-item-title clearfix">
+                                <h4><a href="#">Kiswahili:Grade 4 revision</a></h4>
+                                <p>By Wanjiku Otieno</p>
+                                <div class="shopmeta">
+                                    <span class="pull-left">10 classes</span>
+                                    <span class="pull-right">for 10-15 years</span>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="owl-featured" style="padding: 2% 0;">
+                        <div class="shop-item-list entry">
+                            <div class="">
+                                <img src="{% static 'landing/images/xcourse_02.png.pagespeed.ic.PL7Wu2UcSB.png' %}" alt="">
+                                <div class="magnifier">
+                                </div>
+                            </div>
+                            <div class="shop-item-title clearfix">
+                                <h4><a href="#">Physics:Waves 3</a></h4>
+                                <p>By Wanjiku Otieno</p>
+                                <div class="shopmeta">
+                                    <span class="pull-left">10 classes</span>
+                                    <span class="pull-right">for 10-15 years</span>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="owl-featured" style="padding: 2%;">
+                        <div class="shop-item-list entry">
+                            <div class="">
+                                <img src="{% static 'landing/images/xcourse_02.png.pagespeed.ic.PL7Wu2UcSB.png' %}" alt="">
+                                <div class="magnifier">
+                                </div>
+                            </div>
+                            <div class="shop-item-title clearfix">
+                                <h4><a href="#">English:Parciple and Tenses</a></h4>
+                                <p>By Wanjiku Otieno</p>
+                                <div class="shopmeta">
+                                    <span class="pull-left">10 classes</span>
+                                    <span class="pull-right">for 10-15 years</span>
+
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="owl-featured" style="padding: 2% 0;">
+                        <div class="shop-item-list entry">
+                            <div class="">
+                                <img src="{% static 'landing/images/xcourse_02.png.pagespeed.ic.PL7Wu2UcSB.png' %}" alt="">
+                                <div class="magnifier">
+                                </div>
+                            </div>
+                            <div class="shop-item-title clearfix">
+                                <h4><a href="#">Math:surds and algebra</a></h4>
+                                <p>By Wanjiku Otieno</p>
+                                <div class="shopmeta">
+                                    <span class="pull-left">10 classes</span>
+                                    <span class="pull-right">for 10-15 years</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+    </div>
+
+    </div>
+    </section>
+
+    <section class="grey section" id="testimonials">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="section-title text-center">
+                        <h4>Testimonials</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="testimonial">
+                        <img class="alignleft img-circle" src="{% static 'landing/images/xstudent_01.png.pagespeed.ic.756JwMcqdq.png' %}" alt="">
+                        <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us </p>
+                        <div class="testimonial-meta">
+                            <h4>Bethany <small><a href="#">bloomer</a></small></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="testimonial">
+                        <img class="alignleft img-circle" src="{% static 'landing/images/xstudent_02.png.pagespeed.ic.y-PM-y4pVj.png' %}" alt="">
+                        <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us</p>
+                        <div class="testimonial-meta">
+                            <h4>Fortune<small><a href="#">bloomer</a></small></h4>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                    <div class="testimonial">
+                        <img class="alignleft img-circle" src="{% static 'landing/images/xstudent_03.png.pagespeed.ic.uCQY3WNMCJ.png' %}" alt="">
+                        <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us</p>
+                        <div class="testimonial-meta">
+                            <h4>Afandi<small><a href="#">bloomer</a></small></h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    =======
+    </section>
+    <footer class="copyright">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <p>&copy; BloomLearn</p>
+                </div>
+                </section>
+                <div class="col-md-6 text-cen">
+                    <ul class="list-inline">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#skillup">About</a></li>
+                        <li><a href="#topcourses">Courses</a></li>
+                        <li><a href="#testimonials">Testimonials</a></li>
+                        <a href="https://forms.office.com/r/2hk2JQvguq" target="_self"><button class="btn-donate" style="float: right;">Donate</button></a>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    </div>
+    <script src="{% static 'landing/js/jquery min js.js' %}"></script>
+    <!-- <script src="{% static 'landing/js/bootstrap.min.jsretina.js' %}"></script> -->
+    <script>
+        eval(mod_pagespeed_gFRwwUbyVc);
+    </script>
+    <script>
+        eval(mod_pagespeed_rQwXk4AOUN);
+    </script>
+    <script>
+        eval(mod_pagespeed_U0OPgGhapl);
+    </script>
+    <script src="{% static 'landing/js/carousel.js parallax.js' %}"></script>
+    <script>
+        eval(mod_pagespeed_6Ja02QZq$f);
+    </script>
+    <script>
+        eval(mod_pagespeed_AZ_gON44eP);
+    </script>
+    <script>
+        eval(mod_pagespeed_KxQMf5X6rF);
+    </script>
+    <script src="{% static 'landing/rs-plugin/js/jquery.themepunch.tools.min.js.pagespeed.jm.0PLSBOOLZa.js' %}"></script>
+    <script src="{% static 'landing/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <script>
+        jQuery(document).ready(function() {
+            jQuery('.tp-banner').show().revolution({
+                dottedOverlay: "none",
+                delay: 16000,
+                startwidth: 1170,
+                startheight: 880,
+                hideThumbs: 200,
+                thumbWidth: 100,
+                thumbHeight: 50,
+                thumbAmount: 5,
+                navigationType: "none",
+                navigationArrows: "solo",
+                navigationStyle: "preview3",
+                touchenabled: "on",
+                onHoverStop: "on",
+                swipe_velocity: 0.7,
+                swipe_min_touches: 1,
+                swipe_max_touches: 1,
+                drag_block_vertical: false,
+                parallax: "mouse",
+                parallaxBgFreeze: "on",
+                parallaxLevels: [10, 7, 4, 3, 2, 5, 4, 3, 2, 1],
+                parallaxDisableOnMobile: "off",
+                keyboardNavigation: "off",
+                navigationHAlign: "center",
+                navigationVAlign: "bottom",
+                navigationHOffset: 0,
+                navigationVOffset: 20,
+                soloArrowLeftHalign: "left",
+                soloArrowLeftValign: "center",
+                soloArrowLeftHOffset: 20,
+                soloArrowLeftVOffset: 0,
+                soloArrowRightHalign: "right",
+                soloArrowRightValign: "center",
+                soloArrowRightHOffset: 20,
+                soloArrowRightVOffset: 0,
+                shadow: 0,
+                fullWidth: "on",
+                fullScreen: "off",
+                spinner: "spinner4",
+                stopLoop: "off",
+                stopAfterLoops: -1,
+                stopAtSlide: -1,
+                shuffle: "off",
+                autoHeight: "off",
+                forceFullWidth: "off",
+                hideThumbsOnMobile: "off",
+                hideNavDelayOnMobile: 1500,
+                hideBulletsOnMobile: "off",
+                hideArrowsOnMobile: "off",
+                hideThumbsUnderResolution: 0,
+                hideSliderAtLimit: 0,
+                hideCaptionAtLimit: 0,
+                hideAllCaptionAtLilmit: 0,
+                startWithSlide: 0,
+                fullScreenOffsetContainer: ""
+            });
+        });
+    </script>
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+    <script src="{% static 'landing/js/contact.jsmap.js' %}"></script>
+    <script>
+        eval(mod_pagespeed_CCCJJdU9$y);
+    </script>
+    <script>
+        eval(mod_pagespeed_WcwWTYPZDc);
+    </script>
+</body>
+
+<!-- index339:33 GMT -->
+
+</html>
+<!-- <sript src="rs-plugin/js/jquery.themepunch.tools.min.js.pagespeed.jm.0PLSBOOLZa.js"></script> -->
+<script src="{% static 'landing/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+<script>
+    jQuery(document).ready(function() {
+        jQuery('.tp-banner').show().revolution({
+            dottedOverlay: "none",
+            delay: 16000,
+            startwidth: 1170,
+            startheight: 880,
+            hideThumbs: 200,
+            thumbWidth: 100,
+            thumbHeight: 50,
+            thumbAmount: 5,
+            navigationType: "none",
+            navigationArrows: "solo",
+            navigationStyle: "preview3",
+            touchenabled: "on",
+            onHoverStop: "on",
+            swipe_velocity: 0.7,
+            swipe_min_touches: 1,
+            swipe_max_touches: 1,
+            drag_block_vertical: false,
+            parallax: "mouse",
+            parallaxBgFreeze: "on",
+            parallaxLevels: [10, 7, 4, 3, 2, 5, 4, 3, 2, 1],
+            parallaxDisableOnMobile: "off",
+            keyboardNavigation: "off",
+            navigationHAlign: "center",
+            navigationVAlign: "bottom",
+            navigationHOffset: 0,
+            navigationVOffset: 20,
+            soloArrowLeftHalign: "left",
+            soloArrowLeftValign: "center",
+            soloArrowLeftHOffset: 20,
+            soloArrowLeftVOffset: 0,
+            soloArrowRightHalign: "right",
+            soloArrowRightValign: "center",
+            soloArrowRightHOffset: 20,
+            soloArrowRightVOffset: 0,
+            shadow: 0,
+            fullWidth: "on",
+            fullScreen: "off",
+            spinner: "spinner4",
+            stopLoop: "off",
+            stopAfterLoops: -1,
+            stopAtSlide: -1,
+            shuffle: "off",
+            autoHeight: "off",
+            forceFullWidth: "off",
+            hideThumbsOnMobile: "off",
+            hideNavDelayOnMobile: 1500,
+            hideBulletsOnMobile: "off",
+            hideArrowsOnMobile: "off",
+            hideThumbsUnderResolution: 0,
+            hideSliderAtLimit: 0,
+            hideCaptionAtLimit: 0,
+            hideAllCaptionAtLilmit: 0,
+            startWithSlide: 0,
+            fullScreenOffsetContainer: ""
+        });
+    });
+</script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="{% static 'landing/js/contact.jsmap.js' %}"></script>
+<script>
+    eval(mod_pagespeed_CCCJJdU9$y);
+</script>
+<script>
+    eval(mod_pagespeed_WcwWTYPZDc);
+</script>
+</body>
+
+<!-- index339:33 GMT -->
+
+</html>
+</script>
+<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+<script src="{% static 'landing/js/contact.jsmap.js' %}"></script>
+<script>
+    eval(mod_pagespeed_CCCJJdU9$y);
+</script>
+<script>
+    eval(mod_pagespeed_WcwWTYPZDc);
+</script>
+</body>
+
+<!-- index339:33 GMT -->
+
+</html>

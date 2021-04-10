@@ -1,0 +1,46 @@
+{% load static %} 
+{% load widget_tweaks %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'fonts/icomoon/style.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+    <title>Bloom | New Slot</title>
+</head>
+
+<body>
+  <div>
+    <button class="btn-donate"   style="border: #007bff 2px solid; border-radius: 5px;"><a href="{% url 'teacher:homepage' %}" target="_self">Go back home</a></button>
+</div>
+<h1 style="text-align: center; padding-top: 10%;">Create Session</h1>
+<form  method="post" style="padding: 0 15%;">
+    {% csrf_token %}
+    <div class="form-group first">
+      <label for="username">Session Start Time</label>
+      <p>{% render_field tform.startTime  class+="form-control" %}</p>
+    </div>
+    <div class="form-group last mb-3">
+      <label for="password">Session End Time</label>
+      <p>{% render_field tform.endTime class+="form-control" %}</p>
+    </div>
+    <div class="form-group last mb-3">
+        <label for="password">Session Date</label>
+        <p>{% render_field tform.slotDate class+="form-control" %}</p>
+      </div>
+    <input type="submit" value="Create Session" class="btn btn-block btn-primary">
+</form>
+</body>
+
+</html>
