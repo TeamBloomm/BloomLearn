@@ -1,3 +1,5 @@
+[![Build Status](https://dev.azure.com/TeamBloom/Bloom-Learn/_apis/build/status/BethanyJep.BloomLearn?branchName=refs%2Fpull%2F18%2Fmerge)](https://dev.azure.com/TeamBloom/Bloom-Learn/_build/latest?definitionId=4&branchName=refs%2Fpull%2F18%2Fmerge)
+
 ## Installation
 
 install virtual environment
