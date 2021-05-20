@@ -1,0 +1,50 @@
+{% load static %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="{% static 'landing/images/favicon.png' %}" />
+
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'landing/fonts/icomoon/style.css' %}">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'landing/css/bootstrap.min.css' %}">
+
+    <!-- Style -->
+    <link rel="stylesheet" href="{% static 'landing/css/style.css' %}">
+
+    <title>Bloom | Sessions</title>
+</head>
+
+<body>
+<h2>Open Slots</h2>
+{% block content %}
+    {% for s in slots %}
+    <!-- <p>{{slot.user}}</p> -->
+    <p>Slot 1:</p>
+    <ul>
+        <li>{{s.slotDate}}</li>
+        <li>{{s.startTime}}</li>
+        <li>{{s.endTime}}</li>
+    </ul>
+    {% endfor %}
+        <div>
+            <button  style="border: #007bff 2px solid;margin-bottom: 2%; border-radius: 5px;"><a href="{% url 'bookSession:createSession' %}" target="_self">New Slot</a></button>
+        </div>
+        <div>
+            <button class="btn-donate"   style="border: #007bff 2px solid; border-radius: 5px;"><a href="{% url 'bookSession:mySlots' %}" target="_self">My Slots</a></button>
+        </div>
+        <div>
+            <button class="btn-donate"   style="border: #007bff 2px solid; border-radius: 5px;"><a href="{% url 'teacher:homepage' %}" target="_self">Go back home</a></button>
+        </div>
+{% endblock %}
+</body>
+
+</html>
