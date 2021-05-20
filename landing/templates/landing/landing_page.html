@@ -4,467 +4,496 @@
 <!-- index339:30 GMT -->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="keywords" content="">
+    <!-- metas -->    
+    <meta charset="utf-8" />
+    <meta name="author" content="Bloom Learn" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="keywords" content="Bloom Learn - Online learning Platform" />
+    <meta name="description" content="Bloom Learn - Online learning Platform" />
+    <!-- title  -->
     <title> Bloom Learn | Online learning Platform</title>
-    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}"/>
+    <!-- favicon -->
+    <link rel="shortcut icon" href="{% static 'images/favicon.png' %}" />
+    <link rel="apple-touch-icon" href="{% static 'images/favicon.png' %}" />
+    <link rel="apple-touch-icon" sizes="72x72" href="{% static 'images/favicon.png' %}" />
+    <link rel="apple-touch-icon" sizes="114x114" href="{% static 'images/favicon.png' %}" />
+    <!-- plugins -->
+    <link rel="stylesheet" href="{% static 'css/plugins.css' %}" />
     <script src="https://kit.fontawesome.com/21af872b52.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="{% static 'css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/A settings css pagespeed.css' %}" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{% static 'fonts/A fonts font-awesome-4.3.0.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/A menu css pagespeed.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'css/A carousel css bbbpress css.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/A style css.css'%}" />
-    <!-- <link rel="shortcut icon" href="{% static 'landing/images/favicon.png' %}" /> -->
-    <link rel="stylesheet" href="{% static 'landing/css/style.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'landing/rs-plugin/css/A settings css pagespeed.css' %}" media="screen" />
-    <link rel="stylesheet" type="text/css" href="{% static 'landing/fonts/A fonts font-awesome-4.3.0.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/A menu css pagespeed.css' %}">
-    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/A carousel css bbbpress css.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'landing/css/A style css.css'%}" />
+    <!-- search css -->
+    <link rel="stylesheet" href="{% static 'search/search.css' %}" />
+    <!-- theme core css -->
+    <link href="{% static 'css/styles.css' %}" rel="stylesheet" id="colors">
+    <!-- custom css -->
+    <link href="{% static 'css/custom.css' %}" rel="stylesheet">
 </head>
 
 <body>
-    <div id="loader">
-        <div class="loader-container">
-            <img src="{% static 'landing/images/site.gif' %}" alt="My image" class="loader-site">
-        </div>
+<!-- start page loading -->
+<!-- <div id="preloader">
+    <div class="row loader">
+        <div class="loader-icon"></div>
     </div>
+</div> -->
+<!-- end page loading -->
 
-    <div id="wrapper">
-        <header class="header">
+<!-- start main-wrapper section -->
+<div class="main-wrapper">
+
+    <!-- start header section -->
+    <header class="w-100 bg-grey sm-position-relative">
+        <div class="navbar-default">
+
+            <!-- start top search -->
+            <div class="top-search bg-theme-solid">
+                <div class="container">
+                    <form class="search-form" action="search.html" method="GET" accept-charset="utf-8">
+                        <div class="input-group">
+                            <span class="input-group-addon cursor-pointer">
+                                <button class="search-form_submit fas fa-search font-size18 text-white" type="submit"></button>
+                            </span>
+                            <input type="text" class="search-form_input form-control" name="s" autocomplete="off" placeholder="Type & hit enter...">
+                            <span class="input-group-addon close-search"><i class="fas fa-times mt-2"></i></span>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- end top search -->
+
             <div class="container">
-                <div class="hovermenu ttmenu">s
-                    <div class="navbar navbar-default" role="navigation">
-                        <div class="navbar-header">
-                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
-                      <span class="sr-only">Toggle navigation</span>
-                      <span class="fa fa-bars"></span>
-                    </button>
-                            <div class="logo">
-                                <img src="{% static 'landing/images/logo.png' %}" alt="logo" class="navbar-brand">
-                            </div>
-                        </div>
-                        <div class="navbar-collapse collapse">
-                            <ul class="nav navbar-nav">
-                                <li><a href="#skillup">About</a></li>
-                                <li class="dropdown ttmenu-half">
-                                    <a href="#topcourses">Courses</a>
-                                </li>
-                                <li class="dropdown ttmenu-half">
-                                    <a href="#testimonials">Testimonials</a>
-                                </li>
-                            </ul>
-                            <ul class="nav navbar-nav navbar-right">
-                                <li>
-                                    <a class="btn btn-primary" href="{% url 'landing:select_role' %}"><i class="fa fa-sign-in"></i> Register Now</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
+                <div class="row align-items-center">
+                    <div class="col-12 col-lg-12">
+                        <div class="menu_area alt-font">
+                            <nav class="navbar navbar-expand-lg navbar-light p-0">
 
-        <section class="slider-selection">
-            <div class="tp-banner-container" style="display: flex;">
-                <div class="banner-content" style="padding: 8%;">
-                    <h3 class="banner-text">Teach or Learn at the Comfort of your Home</h3>
-                    <p class="banner-text-small">We aim to aims to connect teachers and children from all over Africa. Join today and start your journey with us.</p>
-                    <button class="btn-start"><a href="{% url 'child:registration' %}">Start Learning</a></button>
-                    <button class="btn-donate"><a href="https://forms.office.com/r/Cq5HZU2CpP" target="_self">Donate</a></button>
-                </div>
-                <div style="padding-right: 5%;" >
-                    <img src="{% static 'images/header-image.png' %}" alt="header-image" width="400px" height="auto" >
-                </div>
-            </div>
-        </section>
-
-        <section class="white section nopaddingbottom" id="skillup">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title text-center">
-                            <h4>Skill Up with Us</h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4 col-sm-6">
-                        <div class="feature-list">
-                            <i class="fa fa-graduation-cap alignleft"></i>
-                            <p><strong>Teach</strong></p>
-                            <p>
-                                We aim to connect teachers and children from all over Africa.Join today and start your journey with us.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="feature-list">
-                            <i class="fa fa-shopping-cart alignleft"></i>
-                            <p><strong>Learn</strong></p>
-                            <p>
-                                We aim to connect teachers and children from all over Africa.Join today and start your journey with us.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-                        <div class="feature-list">
-                            <i class="fa fa-question alignleft"></i>
-                            <p><strong>Donate</strong></p>
-                            <p>
-                                We aim to connect teachers and children from all over Africa.Join today and start your journey with us.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <hr class="invis" />
-                <!-- <hr class="invis" /> -->
-            </div>
-        </section>
-
-        <section class="white section" id="topcourses">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-12">
-                        <div class="section-title text-center">
-                            <h4>Top Courses</h4>
-                        </div>
-                    </div>
-                </div>
-
-                <div id="owl-featured-2" class="owl-custom" style="display: flex;">
-
-                    <div class="owl-featured" style="padding: 2%;">
-                        <div class="shop-item-list entry">
-                            <div class="">
-                                <img src="{% static 'landing/images/xcourse_01.png.pagespeed.ic.XTOvCuUmZu.png' %}" alt="">
-                                <div class="magnifier">
+                                <div class="navbar-header navbar-header-custom">
+                                    <!-- start logo -->
+                                    <a href="" class="navbar-brand"><img id="logo" src="{% static 'images/logo.png' %}" alt="logo"></a>
+                                    <!-- end logo -->
                                 </div>
-                            </div>
-                            <div class="shop-item-title clearfix">
-                                <h4><a href="#">Kiswahili:Grade 4 revision</a></h4>
-                                <p>By Wanjiku Otieno</p>
-                                <div class="shopmeta">
-                                    <span class="pull-left">10 classes</span>
-                                    <span class="pull-right">for 10-15 years</span>
 
-                                </div>
-                            </div>
+                                <div class="navbar-toggler dark"></div>
 
-                        </div>
-                    </div>
+                                <!-- start menu area -->
+                                <ul class="navbar-nav ml-auto" id="nav">
+                                    <li><a href="#skillup">About</a></li>
+                                    <li><a href="#topcourses">Courses</a></li>
+                                    <li><a href="#team">Our Team</a></li>
+                                    <li><a href="{% url 'child:registration' %}" class="">Register Now</a></li>
+                                </ul>
+                                <!-- end menu area -->
 
-                    <div class="owl-featured" style="padding: 2% 0;">
-                        <div class="shop-item-list entry">
-                            <div class="">
-                                <img src="{% static 'landing/images/xcourse_02.png.pagespeed.ic.PL7Wu2UcSB.png' %}" alt="">
-                                <div class="magnifier">
-                                </div>
-                            </div>
-                            <div class="shop-item-title clearfix">
-                                <h4><a href="#">Physics:Waves 3</a></h4>
-                                <p>By Wanjiku Otieno</p>
-                                <div class="shopmeta">
-                                    <span class="pull-left">10 classes</span>
-                                    <span class="pull-right">for 10-15 years</span>
+                                <!-- start attribute navigation -->
+                                <!-- <div class="attr-nav">
+                                    <ul>
+                                        <li class="search"><a href="#!"><i class="fas fa-search"></i></a></li>
+                                    </ul>
+                                </div> -->
+                                <!-- end attribute navigation -->
 
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="owl-featured" style="padding: 2%;">
-                        <div class="shop-item-list entry">
-                            <div class="">
-                                <img src="{% static 'landing/images/xcourse_02.png.pagespeed.ic.PL7Wu2UcSB.png' %}" alt="">
-                                <div class="magnifier">
-                                </div>
-                            </div>
-                            <div class="shop-item-title clearfix">
-                                <h4><a href="#">English:Parciple and Tenses</a></h4>
-                                <p>By Wanjiku Otieno</p>
-                                <div class="shopmeta">
-                                    <span class="pull-left">10 classes</span>
-                                    <span class="pull-right">for 10-15 years</span>
-
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-                    <div class="owl-featured" style="padding: 2% 0;">
-                        <div class="shop-item-list entry">
-                            <div class="">
-                                <img src="{% static 'landing/images/xcourse_02.png.pagespeed.ic.PL7Wu2UcSB.png' %}" alt="">
-                                <div class="magnifier">
-                                </div>
-                            </div>
-                            <div class="shop-item-title clearfix">
-                                <h4><a href="#">Math:surds and algebra</a></h4>
-                                <p>By Wanjiku Otieno</p>
-                                <div class="shopmeta">
-                                    <span class="pull-left">10 classes</span>
-                                    <span class="pull-right">for 10-15 years</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-    </div>
-
-    </div>
-    </section>
-
-    <section class="grey section" id="testimonials">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="section-title text-center">
-                        <h4>Testimonials</h4>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="testimonial">
-                        <img class="alignleft img-circle" src="{% static 'landing/images/xstudent_01.png.pagespeed.ic.756JwMcqdq.png' %}" alt="">
-                        <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us </p>
-                        <div class="testimonial-meta">
-                            <h4>Bethany <small><a href="#">bloomer</a></small></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="testimonial">
-                        <img class="alignleft img-circle" src="{% static 'landing/images/xstudent_02.png.pagespeed.ic.y-PM-y4pVj.png' %}" alt="">
-                        <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us</p>
-                        <div class="testimonial-meta">
-                            <h4>Fortune<small><a href="#">bloomer</a></small></h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-4 col-sm-12">
-                    <div class="testimonial">
-                        <img class="alignleft img-circle" src="{% static 'landing/images/xstudent_03.png.pagespeed.ic.uCQY3WNMCJ.png' %}" alt="">
-                        <p>We aim to connect teachers and children from all over Africa.Join today and start your journey with us</p>
-                        <div class="testimonial-meta">
-                            <h4>Afandi<small><a href="#">bloomer</a></small></h4>
+                            </nav>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </header>
+    <!-- end header section -->
 
-    </section>
-    =======
-    </section>
-    <footer class="copyright">
+    <!-- start main banner area -->
+    <div class="main-banner-style05 bg-grey">
+
+        <div class="home_bubble">
+            <div class="square-shape2"></div>
+            <div class="bubble b_two d-none d-md-block"></div>
+            <div class="bubble b_three"></div>
+            <div class="bubble b_four d-none d-sm-block"></div>
+            <div class="square-shape1 d-none d-sm-block"></div>
+            <div class="bubble b_six d-none d-sm-block"></div>
+            <div class="triangle-shape1 d-none d-sm-block"></div>
+            <div class="triangle-shape2 d-none d-sm-block"></div>
+        </div>
+
         <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-left">
-                    <p>&copy; BloomLearn</p>
+            <div class="row justify-content-center">
+
+                <!-- start left banner text -->
+                <div class="col-lg-10 text-center">
+                    <div class="header-text">
+                        <h1 class="wow fadeInUp" data-wow-delay=".1s">Teach and Learn at the Comfort of your Home</h1>
+                        <p class="small-title w-90 w-md-75 w-xl-65 wow fadeInUp mx-auto mb-2-2" data-wow-delay=".2s">We aim to connect teachers and children from all over Africa. Join today and start your journey with us.</p>
+                        <div class="wow fadeInUp story-video" data-wow-delay=".4s">
+                            <a href="{% url 'child:registration' %}" class="butn style-one green ml-1 my-1 my-sm-0">Start Learning</a>
+                            <a href="https://forms.office.com/pages/responsepage.aspx?id=oBzDhDusrk6tEVGdgCM-b7xNx8ppT_JEiM7jqzDM5VxUNFQ3UUExWURTNzVIVk9RVjczSFY3SVUwVS4u" class="butn style-one orange ml-1 my-1 my-sm-0">Donate</a>
+                        </div>
+                    </div>
                 </div>
-                </section>
-                <div class="col-md-6 text-cen">
-                    <ul class="list-inline">
-                        <li><a href="index.html">Home</a></li>
+                <!-- end banner text -->
+
+            </div>
+        </div>
+        <div class="banner-content-img wow fadeInUp" data-wow-delay=".2s">
+            <img src="{% static 'images/header-image.png' %}" alt="teach and learn"  />
+        </div>
+
+    </div>
+    <!-- end main banner area -->
+
+    <!-- start feature section -->
+    <section >
+        <div class="container pt-10 pt-sm-14 pt-md-20 pt-xl-24" id="skillup">
+
+            <div class="w-md-85 w-lg-65 w-xl-50 text-center mx-auto mb-6 mb-lg-8">
+
+                <div class="badge badge-pill badge-primary-soft mb-3">
+                    <span>Skill Up with Us</span>
+                </div>
+
+                <h2 class="mb-0">A complete solution for preparing students for success</h2>
+            </div>
+
+            <div class="row">
+
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="card card-style03">
+                        <div class="card-body">
+                            <span class="mb-2-6 d-block"><img src="{% static 'images/content/img-01.svg' %}" alt="..." class="w-50"></span>
+                            <h3 class="h5 mb-3">Teach</h3>
+                            <p class="display-30">We equip teachers with everything needed to teach students from all over Africa. Join as a teacher today and start your journey with us.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4 mb-5 mb-lg-0">
+                    <div class="card card-style03">
+                        <div class="card-body">
+                            <span class="mb-2-6 d-block"><img src="{% static 'images/content/img-02.svg' %}" alt="..." class="w-50"></span>
+                            <h3 class="h5 mb-3">Learn</h3>
+                            <p class="display-30">We connect students in Africa with up to par teachers and learning resources. Start your learning journey with us today.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="card card-style03">
+                        <div class="card-body">
+                            <span class="mb-2-6 d-block"><img src="{% static 'images/content/img-03.svg' %}" alt="..." class="w-50"></span>
+                            <h3 class="h5 mb-3">Donate</h3>
+                            <p class="display-30">We provide students across africa with learning devices, resources and space to aid their learning. Kindly donate to support the cause.</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+    <!-- end feature section -->
+
+    <!-- start case study section -->
+    <section id="topcourses">
+        <div class="container">
+            <div class="w-md-85 w-lg-65 w-xl-50 text-center mx-auto mb-6 mb-lg-8">
+                <div class="badge badge-pill badge-primary-soft mb-3">
+                    <span>Top Courses</span>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="card card-style01">
+                        <div class="card-img">
+                            <img src="{% static 'images/xcourse_01.png.pagespeed.ic.XTOvCuUmZu.png' %}" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h4>Maths: Surds and Algebra</h4>
+                            <small>BloomLearn Tutor</small>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <a href="#!" class="read-more">learn more</a>
+                            <a href="#!"><i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 mb-4 mb-lg-0">
+                    <div class="card card-style01">
+                        <div class="card-img">
+                            <img src="{% static 'images/xcourse_04.png.pagespeed.ic.2rIKmUwjA7.png' %}" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h4>English: Tenses</h4>
+                            <small>BloomLearn Tutor</small>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <a href="#!" class="read-more">learn more</a>
+                            <a href="#!"><i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3 mb-4 mb-sm-0">
+                    <div class="card card-style01">
+                        <div class="card-img">
+                            <img src="{% static 'images/xcourse_03.png.pagespeed.ic.8e1MyY5M7i.png' %}" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h4>Physics: Waves</h4>
+                            <small>BloomLearn Tutor</small>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <a href="#!" class="read-more">learn more</a>
+                            <a href="#!"><i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="card card-style01">
+                        <div class="card-img">
+                            <img src="{% static 'images/xcourse_02.png.pagespeed.ic.PL7Wu2UcSB.png' %}" alt="...">
+                        </div>
+                        <div class="card-body">
+                            <h4>Kiswahili: Grade 4</h4>
+                            <small>BloomLearn Tutor</small>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <a href="#!" class="read-more">learn more</a>
+                            <a href="#!"><i class="ti-arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end case study section -->
+
+    <!-- start team section -->
+    <section class="bg-grey" id="team">
+
+        <div class="container">
+
+            <div class="w-md-85 w-lg-65 w-xl-50 text-center mx-auto mb-6 mb-lg-8">
+
+                <div class="badge badge-pill badge-primary-soft mb-3">
+                    <span >Our Team</span>
+                </div>
+
+                <h2 class="mb-0">Nothing works better than our team members</h2>
+            </div>
+
+            <div class="row">
+                <div class=" owl-theme case-studies"> 
+                    <!-- class == owl-carousel -->
+                <div class="mb-5 mb-md-0 text-center case-study-block1">
+                    <div class="team-style02 mx-lg-">
+                        <div class="team-img" >
+                            <img src="{% static 'images/Bethany.png' %}" alt="" style="height: 400px; width: auto;">
+                        </div>
+                        <div class="team-icons clearfix">
+                            <a href="#!"><i class="fab fa-twitter"></i></a>
+                            <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                        <div class="py-4 text-center">
+                            <h6 class="opacity5">Team Lead</h6>
+                            <h5 class="mb-0">Bethany Jepchumba</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5 mb-md-0 text-center case-study-block1">
+                    <div class="team-style02 mx-lg-">
+                        <div class="team-img" >
+                            <img src="{% static 'images/Joy.jpeg' %}" alt="" style="height: 400px; width: auto;">
+                        </div>
+                        <div class="team-icons clearfix">
+                            <a href="#!"><i class="fab fa-twitter"></i></a>
+                            <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+
+                        <div class="py-4 text-center">
+                            <h6 class="opacity5">Frontend Developer</h6>
+                            <h5 class="mb-0">Joy Kathure</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-center case-study-block1">
+                    <div class="team-style02 mx-lg-">
+                        <div class="team-img" >
+                            <img src="{% static 'images/Festus.png' %}" alt="" style="height: 400px; width: auto;">
+                        </div>
+                        <div class="team-icons clearfix">
+                            <a href="#!"><i class="fab fa-twitter"></i></a>
+                            <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+
+                        <div class="py-4 text-center">
+                            <h6 class="opacity5">Frontend Developer</h6>
+                            <h5 class="mb-0">Festus Idowu</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5 mb-md-0 text-center case-study-block1">
+                    <div class="team-style02 mx-lg-">
+                        <div class="team-img" >
+                            <img src="{% static 'images/Fortune.png' %}" alt="" style="height: 400px; width: auto;">
+                        </div>
+                        <div class="team-icons clearfix">
+                            <a href="#!"><i class="fab fa-twitter"></i></a>
+                            <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+
+                        <div class="py-4 text-center">
+                            <h6 class="opacity5">Backend Developer</h6>
+                            <h5 class="mb-0">Fortune Adekogbe</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="mb-5 mb-md-0 text-center case-study-block1">
+                    <div class="team-style02 mx-lg-">
+
+                        <div class="team-img" >
+                            <img src="{% static 'images/Indiatsi.jpeg' %}" alt="" style="height: 400px; width: auto;">
+                        </div>
+                        <div class="team-icons clearfix">
+                            <a href="#!"><i class="fab fa-twitter"></i></a>
+                            <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+
+                        <div class="py-4 text-center">
+                            <h6 class="opacity5">Backend Developer</h6>
+                            <h5 class="mb-0">Afandi Indiatsi</h5>
+                        </div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- end team section -->
+
+    <!-- start partners section -->
+    <section class="bg-grey md">
+        <div class="container">
+            <div class="owl-carousel owl-theme clients-style1" id="clients">
+                <div class="item"><img src="{% static 'images/microsoft.jpg' %}" alt="..."></div>
+                <div class="item"><img src="{% static 'images/adc.png' %}" alt="..."></div>
+                <div class="item"><img src="{% static 'images/save-the-children.png' %}" alt="..."></div>
+                <div class="item"><img src="{% static 'images/unicef-child.png' %}" alt="..."></div>
+                <div class="item"><img src="{% static 'images/gol.png' %}" alt="..."></div>
+            </div>
+        </div>
+    </section>
+    <!-- end partners section -->
+
+    <!-- start footer section -->
+    <footer class="bg-white py-6">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8 col-xl-7 text-center text-lg-right">
+                    <ul class="footer-nav-link mb-0">
                         <li><a href="#skillup">About</a></li>
                         <li><a href="#topcourses">Courses</a></li>
-                        <li><a href="#testimonials">Testimonials</a></li>
-                        <a href="https://forms.office.com/r/2hk2JQvguq" target="_self"><button class="btn-donate" style="float: right;">Donate</button></a>
+                        <li><a href="{% url 'child:registration' %}">Signup</a></li>
+                        <li><a href="https://forms.office.com/pages/responsepage.aspx?id=oBzDhDusrk6tEVGdgCM-b7xNx8ppT_JEiM7jqzDM5VxUNFQ3UUExWURTNzVIVk9RVjczSFY3SVUwVS4u" class="butn style-one fill small">Donate</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+        <div class="container">
+            
+            <div class="border-top border-color-light-black pt-4 mt-4">
+                <div class="row">
+                    <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-left">
+                        <p class="pb-0 text-default">&copy; Copyright BloomLearn
+                            <script>
+                                document.write(new Date().getFullYear())
+                            </script>
+                        </p>
+                    </div>
+                    
+                    <div class="col-lg-6 text-center text-lg-right">
+                        
+                        <ul class="footer-social-icons2">
+                            <li>
+                                <a href="#!"><i class="fab fa-facebook-f"></i></a>
+                            </li>
+                            <li>
+                                <a href="#!"><i class="fab fa-twitter"></i></a>
+                            </li>
+                            <li>
+                                <a href="#!"><i class="fab fa-linkedin-in"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </footer>
-    </div>
-    <script src="{% static 'landing/js/jquery min js.js' %}"></script>
-    <!-- <script src="{% static 'landing/js/bootstrap.min.jsretina.js' %}"></script> -->
-    <script>
-        eval(mod_pagespeed_gFRwwUbyVc);
-    </script>
-    <script>
-        eval(mod_pagespeed_rQwXk4AOUN);
-    </script>
-    <script>
-        eval(mod_pagespeed_U0OPgGhapl);
-    </script>
-    <script src="{% static 'landing/js/carousel.js parallax.js' %}"></script>
-    <script>
-        eval(mod_pagespeed_6Ja02QZq$f);
-    </script>
-    <script>
-        eval(mod_pagespeed_AZ_gON44eP);
-    </script>
-    <script>
-        eval(mod_pagespeed_KxQMf5X6rF);
-    </script>
-    <script src="{% static 'landing/rs-plugin/js/jquery.themepunch.tools.min.js.pagespeed.jm.0PLSBOOLZa.js' %}"></script>
-    <script src="{% static 'landing/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
-    <script>
-        jQuery(document).ready(function() {
-            jQuery('.tp-banner').show().revolution({
-                dottedOverlay: "none",
-                delay: 16000,
-                startwidth: 1170,
-                startheight: 880,
-                hideThumbs: 200,
-                thumbWidth: 100,
-                thumbHeight: 50,
-                thumbAmount: 5,
-                navigationType: "none",
-                navigationArrows: "solo",
-                navigationStyle: "preview3",
-                touchenabled: "on",
-                onHoverStop: "on",
-                swipe_velocity: 0.7,
-                swipe_min_touches: 1,
-                swipe_max_touches: 1,
-                drag_block_vertical: false,
-                parallax: "mouse",
-                parallaxBgFreeze: "on",
-                parallaxLevels: [10, 7, 4, 3, 2, 5, 4, 3, 2, 1],
-                parallaxDisableOnMobile: "off",
-                keyboardNavigation: "off",
-                navigationHAlign: "center",
-                navigationVAlign: "bottom",
-                navigationHOffset: 0,
-                navigationVOffset: 20,
-                soloArrowLeftHalign: "left",
-                soloArrowLeftValign: "center",
-                soloArrowLeftHOffset: 20,
-                soloArrowLeftVOffset: 0,
-                soloArrowRightHalign: "right",
-                soloArrowRightValign: "center",
-                soloArrowRightHOffset: 20,
-                soloArrowRightVOffset: 0,
-                shadow: 0,
-                fullWidth: "on",
-                fullScreen: "off",
-                spinner: "spinner4",
-                stopLoop: "off",
-                stopAfterLoops: -1,
-                stopAtSlide: -1,
-                shuffle: "off",
-                autoHeight: "off",
-                forceFullWidth: "off",
-                hideThumbsOnMobile: "off",
-                hideNavDelayOnMobile: 1500,
-                hideBulletsOnMobile: "off",
-                hideArrowsOnMobile: "off",
-                hideThumbsUnderResolution: 0,
-                hideSliderAtLimit: 0,
-                hideCaptionAtLimit: 0,
-                hideAllCaptionAtLilmit: 0,
-                startWithSlide: 0,
-                fullScreenOffsetContainer: ""
-            });
-        });
-    </script>
-    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-    <script src="{% static 'landing/js/contact.jsmap.js' %}"></script>
-    <script>
-        eval(mod_pagespeed_CCCJJdU9$y);
-    </script>
-    <script>
-        eval(mod_pagespeed_WcwWTYPZDc);
-    </script>
-</body>
+    <!-- end footer section -->
+</div>
+<!-- end main-wrapper section -->
 
-<!-- index339:33 GMT -->
+<!-- start scroll to top -->
+<a href="javascript:void(0)" class="scroll-to-top"><i class="fas fa-angle-up" aria-hidden="true"></i></a>
+<!-- end scroll to top -->
 
-</html>
-<!-- <sript src="rs-plugin/js/jquery.themepunch.tools.min.js.pagespeed.jm.0PLSBOOLZa.js"></script> -->
-<script src="{% static 'landing/rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
-<script>
-    jQuery(document).ready(function() {
-        jQuery('.tp-banner').show().revolution({
-            dottedOverlay: "none",
-            delay: 16000,
-            startwidth: 1170,
-            startheight: 880,
-            hideThumbs: 200,
-            thumbWidth: 100,
-            thumbHeight: 50,
-            thumbAmount: 5,
-            navigationType: "none",
-            navigationArrows: "solo",
-            navigationStyle: "preview3",
-            touchenabled: "on",
-            onHoverStop: "on",
-            swipe_velocity: 0.7,
-            swipe_min_touches: 1,
-            swipe_max_touches: 1,
-            drag_block_vertical: false,
-            parallax: "mouse",
-            parallaxBgFreeze: "on",
-            parallaxLevels: [10, 7, 4, 3, 2, 5, 4, 3, 2, 1],
-            parallaxDisableOnMobile: "off",
-            keyboardNavigation: "off",
-            navigationHAlign: "center",
-            navigationVAlign: "bottom",
-            navigationHOffset: 0,
-            navigationVOffset: 20,
-            soloArrowLeftHalign: "left",
-            soloArrowLeftValign: "center",
-            soloArrowLeftHOffset: 20,
-            soloArrowLeftVOffset: 0,
-            soloArrowRightHalign: "right",
-            soloArrowRightValign: "center",
-            soloArrowRightHOffset: 20,
-            soloArrowRightVOffset: 0,
-            shadow: 0,
-            fullWidth: "on",
-            fullScreen: "off",
-            spinner: "spinner4",
-            stopLoop: "off",
-            stopAfterLoops: -1,
-            stopAtSlide: -1,
-            shuffle: "off",
-            autoHeight: "off",
-            forceFullWidth: "off",
-            hideThumbsOnMobile: "off",
-            hideNavDelayOnMobile: 1500,
-            hideBulletsOnMobile: "off",
-            hideArrowsOnMobile: "off",
-            hideThumbsUnderResolution: 0,
-            hideSliderAtLimit: 0,
-            hideCaptionAtLimit: 0,
-            hideAllCaptionAtLilmit: 0,
-            startWithSlide: 0,
-            fullScreenOffsetContainer: ""
-        });
-    });
-</script>
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script src="{% static 'landing/js/contact.jsmap.js' %}"></script>
-<script>
-    eval(mod_pagespeed_CCCJJdU9$y);
-</script>
-<script>
-    eval(mod_pagespeed_WcwWTYPZDc);
-</script>
-</body>
+<!-- all js include start -->
 
-<!-- index339:33 GMT -->
+<!-- jquery -->
+<script src="{% static 'js/jquery.min.js' %}"></script>
 
-</html>
-</script>
-<script src="http://maps.google.com/maps/api/js?sensor=false"></script>
-<script src="{% static 'landing/js/contact.jsmap.js' %}"></script>
-<script>
-    eval(mod_pagespeed_CCCJJdU9$y);
-</script>
-<script>
-    eval(mod_pagespeed_WcwWTYPZDc);
-</script>
+<!-- modernizr js -->
+<script src="{% static 'js/popper.min.js' %}"></script>
+
+<!-- bootstrap -->
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+
+<!-- scrollIt -->
+<script src="{% static 'js/scrollIt.min.js' %}"></script>
+
+<!-- search -->
+<script src="{% static 'search/search.js' %}"></script>
+
+<!-- navigation -->
+<script src="{% static 'js/nav-menu.js' %}"></script>
+
+<!-- tab -->
+<script src="{% static 'js/easy.responsive.tabs.js' %}"></script>
+
+<!-- owl carousel -->
+<script src="{% static 'js/owl.carousel.js' %}"></script>
+
+<!-- animated js -->
+<script src="{% static 'js/animated-headline.js' %}"></script>
+
+<!-- jquery.counterup.min -->
+<script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+
+<!-- stellar js -->
+<script src="{% static 'js/jquery.stellar.min.js' %}"></script>
+
+<!-- waypoints js -->
+<script src="{% static 'js/waypoints.min.js' %}"></script>
+
+<!-- countdown js -->
+<script src="{% static 'js/countdown.js' %}"></script>
+
+<!-- jquery.magnific-popup js -->
+<script src="{% static 'js/jquery.magnific-popup.min.js' %}"></script>
+
+<!-- isotope.pkgd.min js -->
+<script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+
+<!-- wow js -->
+<script src="{% static 'js/wow.js' %}"></script>
+
+<!-- custom scripts -->
+<script src="{% static 'js/main.js' %}"></script>
+
+<!-- quform plugins js -->
+<script src="{% static 'quform/js/plugins.js' %}"></script>
+
+<!-- quform scripts js -->
+<script src="{% static 'quform/js/scripts.js' %}"></script>
+
+<!-- all js include end -->
 </body>
 
 <!-- index339:33 GMT -->
