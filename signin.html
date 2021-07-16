@@ -1,23 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="img/favicon.png" />
+  <link rel="stylesheet" href="./css/signup/signin.css">
+  <title>Log In</title>
+</head>
+<body class="container">
+  <nav>
+    <img src="img/logo.png" alt="">
+  </nav>
+  <hr>  
+  <section class="left">
+    <div class="sign">
+      <img src="img/sign.png" alt="">
+    </div>
+    <div class="nav">
+      <img src="img/logo.png" alt="">
+    </div>
+  </section>
+  <section class="right">
+    <form id="regForm">
+      <fieldset>
+      <section class="">
+        <h3>Log In</h3>      
+        <label for="email">
+          <input type="email" oninput="this.className = ''" id="email" placeholder="Email Address" required>
+        </label>     
+        <label for="password"></label> 
+        <section class="icon">
+            <input type="password" id="password" placeholder="Password" required />
+            <i class="fa fa-eye" id="togglePassword"></i>
+        </section>  
+        <div class="remember">
+          <span><input type="checkbox" class="checkbox"> Remember me</span>
+          <span><a href="reset-password.html">Forgot Password?</a></span>
+        </div>
+        <button class="">Log In <span><i class="fa fa-sign-in"></i></span></button>
+        <p class="">Don't have an account? <span  ><a href="signup.html">Sign up here</a></span></p>
+      </section>
+      </fieldset>
+    </form>  
+  </section>
+  <script src="./js/signup/signin.js"></script>
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
   <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="img/favicon.png" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:300,400&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="fonts/icomoon/style.css">
 
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/landing/bootstrap.min.css">
     
-    <!-- Style -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/landing/style.css">
 
-    <title>Bloom | Sign Up and Sign In</title>
+    <title>BloomLearn | Sign In</title>
   </head>
   <body>
-  	<!-- Sign In -->
   <div class="d-lg-flex half">
     <div class="bg order-2 order-md-1" style="background-image: url('img/bg_1.png');"></div>
     <div class="contents order-1 order-md-2">
@@ -61,4 +111,4 @@
   </div>
     <script src="js/main.js"></script>
   </body>
-</html>
+</html> -->

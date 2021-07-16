@@ -1,128 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, maximum-scale=1"/>
-    <meta name="description" content="" />
-    <meta name="author" content="" />
-    <meta name="keywords" content="" />
-    <title>My Dashboard | Teacher's Name</title>
-    <link rel="shortcut icon" href="img/favicon.png"/>
-    <link rel="stylesheet"type="text/css" href="rs-plugin/css/A.settings.css.pagespeed.cf.xeOyGChsgq.css" media="screen"/>
-    <link rel="stylesheet" type="text/css" href="A.fonts%2c%2c_font-awesome-4.3.0%2c%2c_css%2c%2c_font-awesome.min.css%2bcss%2c%2c_bootstrap.css%2bcss%2c%2c_animate.css%2cMcc.kSNwpaaMDX.css.pagespeed.cf.w2G3xGgFf0.css"/>
-    <link rel="stylesheet" type="text/css" href="css/A.menu.css.pagespeed.cf.0_hLwXzYkZ.css"/>
-    <link rel="stylesheet" type="text/css" href="css/A.carousel.css.pagespeed.cf.VktteGiLwl.css"/>
-    <link rel="stylesheet" type="text/css" href="A.style.css%2bcss%2c%2c_custom.css%2cMcc.HvWh1qoob-.css.pagespeed.cf.pWH5huNcWh.css"/>
-  </head>
-  <body>
-    <div id="loader">
-      <div class="loader-container">
-        <img src="images/site.gif" alt="" class="loader-site" />
-      </div>
-    </div>
-    <div id="wrapper">
-      <div id="wrapper">
-      <section class="grey page-title">
-        <div class="container">
-          <div class="row">
-            <div class="col-md-6 text-left">
-              <h1>My Dashboard</h1>
-            </div>
-            <div class="col-md-6 text-right">
-              <div class="bread">
-                <ol class="breadcrumb">
-                  <li><a href="index.html">Home</a></li>
-                  <li class="active">Dashboard</li>
-                </ol>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="white section">
-        <div class="container">
-          <div class="row">
-            <div id="course-left-sidebar" class="col-md-3">
-              <div class="course-image-widget">
-                <img
-                  src="upload/xstudent_06.png.pagespeed.ic.M4STWuf1XS.png"
-                  alt=""
-                  class="img-responsive"
-                />
-              </div>
-              <div class="course-meta">
-                <p>BLOOMER</p>
-                <hr />
-                <p>
-                  <a href="edit-profile.html">Edit Profile</a>
-                </p>
-                <hr />
-                <p><a href="teacher-dashboard.html">My Courses</a><small class="label label-primary">0</small></p>
-                <hr />
-                <p><a href="upload-course.html">Create New Course</a></p>
-                <hr />
-                <p>
-                  Messages
-                  <small class="label label-primary"><a href="#">0</a></small>
-                </p>
-                <hr />
-                <p>
-                  Booked Sessions
-                  <small class="label label-primary"><a href="#">0</a></small>
-                </p>
-                <hr />
-                <p>
-                  <a href="signin.html">Logout</a>
-              </p>
-              </div>
-            </div>
-            <div id="course-content" class="col-md-9">
-              <div class="course-description">
-                <h3 class="course-title">Welcome Onboard as the Latest BloomLearn Tutor</h3>
-                <p>You have no courses yet, Start by creating your first <span><a href="upload-course.html" style="color: blue;">course.</a></span></p>
-                </div>
-              </div>
-              <hr class="invis" />
-            </div>
-          </div>
-          <hr class="invis" />
-        </div>
-      </section>
-      <footer class="copyright">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 text-left">
-                    <p>&copy; BloomLearn</p>
-                </div>
-                <div class="col-md-6 text-right">
-                  <button class="btn-start" style="float: right;">Donate</button>
-                </div>
-            </div>
-        </div>
-    </footer>
-    </div>
-    <script src="js/jquery.min.js.pagespeed.jm.iDyG3vc4gw.js"></script>
-    <script src="js/bootstrap.min.js%2bretina.js%2bwow.js.pagespeed.jc.pMrMbVAe_E.js"></script>
-    <script>
-      eval(mod_pagespeed_gFRwwUbyVc);
-    </script>
-    <script>
-      eval(mod_pagespeed_rQwXk4AOUN);
-    </script>
-    <script>
-      eval(mod_pagespeed_U0OPgGhapl);
-    </script>
-    <script src="js/carousel.js%2bcustom.js.pagespeed.jc.nVhk-UfDsv.js"></script>
-    <script>
-      eval(mod_pagespeed_6Ja02QZq$f);
-    </script>
-    <script>
-      eval(mod_pagespeed_KxQMf5X6rF);
-    </script>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/custom.css">
+    <title>Dashboard</title>
+</head>
+<body class="container">
+    <nav>
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <img src="img/logo.png" alt="">
+      </nav>
+      <hr> 
+    <section class="sidebar">
+        <img src="img/logo.png" alt="">
+        <ul>
+            <li><a  class="active" href="#"><i class="fa fa-home"></i>Home </a></li>
+            <li><a href="#"><i class="fa fa-book"></i>My Courses</a></li>
+            <li><a href="#"><i class="fa fa-calendar-o"></i>Sessions</a></li>
+            <li><a href="#"><i class="fa fa-bell"></i>Notifications</a></li>
+            <span>
+            <li><a href="#"><i class="fa fa-user"></i>Pikachu</a></li>
+            <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
+            </span>
+        </ul>
+    </section>
+    <section class="main">
+      <h4>Hello, Bethany</h4>
+      <h3>Welcome Onboard as the Latest BloomLearn Tutor</h3>       
+      <img src="img/Reception Desk.png">
+      <p>No courses created yet. Start by creating one to see them here</p>
+      <button>  + CREATE COURSE</button>
 
-  <!-- course-account40:29  -->
+    </section>
+</body>
 </html>
