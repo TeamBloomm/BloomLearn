@@ -48,6 +48,7 @@ input {
 
 input::placeholder {
   color:#575A7B;
+  font-family: poppins;
 }
 
 input:focus {
@@ -74,6 +75,10 @@ fieldset {
     display: none;
   }
 
+.butn {
+  width: auto;
+}
+
   button {
     background-color: #1F194C;
     color: #ffffff;
@@ -88,6 +93,7 @@ fieldset {
   
   button:hover {
     opacity: 0.8;
+    transform: scale(0.98);
 }
   
 /* Make circles that indicate the steps of the form: */
@@ -149,7 +155,7 @@ a {
 @media (min-width: 750px) { 
   .container {
     margin: 0;
-    /* height: 100%; */
+    height: 100vh;
     grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
 		/* grid-template-areas:
@@ -164,6 +170,8 @@ a {
   grid-gap: 10px;
   grid-template-columns: 1fr;
   grid-template-rows: 50px 1fr;
+  align-items: center;
+  height: 100vh;
   }
 
   .right {
