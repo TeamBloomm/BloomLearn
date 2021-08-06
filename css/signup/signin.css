@@ -38,7 +38,7 @@ hr {
 
 input {
     border-radius: 15px;
-    padding: 10px;
+    padding: 15px;
     margin-bottom: 20px;
     text-shadow: none;
     width: 100%;
@@ -53,6 +53,12 @@ input::placeholder {
 
 input:focus {
     outline: none;
+}
+
+input:focus::placeholder {
+  font-size: 10px;
+  transform: translateY(-15px);
+  color: blue;
 }
 
 fieldset {
@@ -71,7 +77,7 @@ fieldset {
   }
 
 /* Hide all steps by default: */
-.tab {
+#tab {
     display: none;
   }
 
@@ -155,12 +161,9 @@ a {
 @media (min-width: 750px) { 
   .container {
     margin: 0;
-    height: 100vh;
+    height: 100%;
     grid-template-columns: 1fr 1fr;
 		grid-template-rows: auto;
-		/* grid-template-areas:
-		"header header header sidebar"
-		"article article article sidebar"; */
   }
 
 .left {
@@ -174,10 +177,32 @@ a {
   height: 100vh;
   }
 
-  .right {
+  /* .right {
     display: grid;
     align-items: center;
+    grid-template-rows: auto;
+    grid-template-columns: repeat(2, 1fr);  
+    grid-gap: 5px;
+  } */
+
+  /* .first {
+    grid-column: 1/2;
   }
+  .last {
+    grid-column: 2/3;
+  }
+  .mail {
+    grid-column: 1/3;
+  }
+  .pword {
+    grid-column: 1/2;
+  }
+  .cword {
+    grid-column: 2/3;
+  }
+  .rol {
+    grid-column: 1/3;
+  } */
 
   nav {
     display: none;
@@ -197,6 +222,7 @@ a {
     max-width: 100%; 
     height: auto;
   }
+
 }
 
 /* Large devices (large desktops, 1200px and up) */

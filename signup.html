@@ -24,31 +24,41 @@
       <img src="img/logo.png" alt="">
     </div>
   </section>
-  <section class="right">
+  <section>
     <form id="regForm">
-      <fieldset>
+      <fieldset >
         <!-- One "tab" for each step in the form: -->
       <section class="tab">
         <h3>Sign Up 1/2</h3>
-        <label for="firstname">
-          <input type="text" oninput="this.className = ''" id="firstname" placeholder="Firstname" autofocus required>
-        </label>
-        <label for="lastname">
-          <input type="text" oninput="this.className = ''" id="lastname" placeholder="Lastname" required>
-        </label>        
-        <label for="email">
-          <input type="email" oninput="this.className = ''" id="email" placeholder="Email Address" required>
-        </label>       
-        <label for="password"></label> 
-        <section class="icon">
-            <input type="password" id="password" placeholder="Password" required />
-            <i class="fa fa-eye" id="togglePassword"></i>
-        </section>      
-        <section class="icon">
-          <input type="password" id="confirm_password" placeholder="Confirm Password" required />
-          <i class="fa fa-eye" id="toggleConfirmPassword"></i>
-      </section>   
-        <div class="">  
+        <div class="first">
+          <label for="firstname">
+            <input type="text" oninput="this.className = ''" id="firstname" placeholder="Firstname" autofocus required>
+          </label>
+        </div>
+        <div class="last">
+          <label for="lastname">
+            <input type="text" oninput="this.className = ''" id="lastname" placeholder="Lastname" required>
+          </label>
+        </div>  
+        <div class="mail">
+          <label for="email">
+            <input type="email" oninput="this.className = ''" id="email" placeholder="Email Address" required>
+          </label>
+        </div>  
+        <div class="pword">
+          <label for="password"></label> 
+          <section class="icon">
+              <input type="password" id="password" placeholder="Password" required />
+              <i class="fa fa-eye" id="togglePassword"></i>
+          </section> 
+        </div>
+        <div class="cword">
+          <section class="icon">
+            <input type="password" id="confirm_password" placeholder="Confirm Password" required />
+            <i class="fa fa-eye" id="toggleConfirmPassword"></i>
+          </section> 
+        </div>
+        <div class="rol">  
           <input name="role" list="role" oninput="this.className = ''" placeholder="Role" required>
           <datalist id="role">
             <select name="role">
@@ -59,7 +69,8 @@
         </div>  
         <p class="">Already have an account? <span  ><a href="signin.html">Login here</a></span></p>
       </section>
-        <section class="tab">
+
+      <section class="tab">
           <h3>Sign Up 2/2</h3>
           <div class="">  
             <input name="country" list="country" oninput="this.className = ''" placeholder="Country" required>

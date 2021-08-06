@@ -1,10 +1,3 @@
-/*-----------------------------------------------------------------------------------
-
-    Theme Name: Amava - Startup Agency and SasS Business Template
-    Description: Startup Agency and SasS Business Template
-    Author: Chitrakoot Web
-    Version: 3.0
-
     /* ----------------------------------
 
     JS Active Code Index
