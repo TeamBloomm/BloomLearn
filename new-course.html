@@ -1,127 +1,136 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="shortcut icon" href="img/favicon.png" />
-  <link rel="stylesheet" href="./css/signup/signin.css">
+    <meta charset="UTF-8">
+    <meta name="author" content="Bloom Learn" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Bloom Learn - Online learning Platform" />
+    <meta name="keywords" content="Bloom Learn - Online learning Platform" />
+    <!-- favicon -->
+    <link rel="shortcut icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" href="img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/new-course.css">
 
-  <title>Sign Up</title>
+    <title>Dashboard</title>
 </head>
-<body class="container">
-  <nav>
-    <img src="img/logo.png" alt="">
-  </nav>
-  <hr> 
-  <section class="left">
-    <div class="sign">
-      <img src="img/sign.png" alt="">
-    </div>
-    <div class="nav">
-      <img src="img/logo.png" alt="">
-    </div>
-  </section>
-  <section class="right">
-    <form id="regForm">
-      <fieldset>
-        <!-- One "tab" for each step in the form: -->
-      <section class="tab">
-        <h3>Sign Up 1/2</h3>
-        <label for="firstname">
-          <input type="text" oninput="this.className = ''" id="firstname" placeholder="Firstname" autofocus required>
-        </label>
-        <label for="lastname">
-          <input type="text" oninput="this.className = ''" id="lastname" placeholder="Lastname" required>
-        </label>        
-        <label for="email">
-          <input type="email" oninput="this.className = ''" id="email" placeholder="Email Address" required>
-        </label>       
-        <label for="password"></label> 
-        <section class="icon">
-            <input type="password" id="password" placeholder="Password" required />
-            <i class="fa fa-eye" id="togglePassword"></i>
-        </section>      
-        <section class="icon">
-          <input type="password" id="confirm_password" placeholder="Confirm Password" required />
-          <i class="fa fa-eye" id="toggleConfirmPassword"></i>
-      </section>   
-        <div class="">  
-          <input name="role" list="role" oninput="this.className = ''" placeholder="Role" required>
-          <datalist id="role">
-            <select name="role">
-              <option value="Teacher">Teacher</option>
-              <option value="Student">Student</option>
-            </select>
-          </datalist>
-        </div>  
-        <p class="">Already have an account? <span  ><a href="signin.html">Login here</a></span></p>
-      </section>
-        <section class="tab">
-          <h3>Sign Up 2/2</h3>
-          <div class="">  
-            <input name="country" list="country" oninput="this.className = ''" placeholder="Country" required>
-            <datalist id="country">
-              <select name="country">
-                <option value="Kenya">Kenya</option>
-                <option value="Nigeria">Nigeria</option>
-              </select>
-            </datalist>
-          </div>
-          <div class="">
-            <input type="text" oninput="this.className = ''" placeholder="County or State" required>
-          </div>
-          <div class="">
-            <input name="Educational Level" list="Educational Level" oninput="this.className = ''" placeholder="Educational Level" required>
-            <datalist id="Educational Level"> 
-              <select name="Educational Level">
-                <option value="Primary">Primary</option>
-                <option value="Secondary">Secondary</option>
-                <option value="Tertiary">Tertiary</option>
-              </select>
-            </datalist>
-          </div>
-          <div class="">
-            <input name="Grade or Level" list="Grade or Level" oninput="this.className = ''" placeholder="Grade or Level" required>
-            <datalist id="Grade or Level">
-              <select name="Grade or Level">
-                <option value="Grade 1">Grade 1</option>
-                <option value="Grade 2">Grade 2</option>
-                <option value="Grade 3">Grade 3</option>
-                <option value="Grade 4">Grade 4</option>
-                <option value="Grade 5">Grade 5</option>
-              </select>
-            </datalist>
-          </div>
-          <div class=""> 
-            <input type="text" oninput="this.className = ''" placeholder="Parent/Guardian Full name" required>
-          </div>
-          <div class="email">
-            <input type="email" oninput="this.className = ''" id="email" placeholder="Parent/Guardian Email Address" required>
-          </div>
-          <p>By signing up you accept our <a href="#">terms and conditions</a></p>
+<body class="container" id="main">
+    <section id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+        <ul>
+            <li><a class="active" href="#"><i class="fa fa-home"></i>Home </a></li>
+            <li><a href="#"><i class="fa fa-book"></i>My Courses</a></li>
+            <li><a href="#"><i class="fa fa-calendar-o"></i>Sessions</a></li>
+            <li><a href="#"><i class="fa fa-bell-o"></i>Notifications</a></li>
+            <span>
+            <li><a href="#"><i class="fa fa-user-o"></i>Pikachu</a></li>
+            <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
+            </span>
+        </ul>
+    </section>
+    <section class="sidebar1">
+        <ul>
+            <li><a class="active" href="#"><i class="fa fa-home"></i>Home </a></li>
+            <li><a href="#"><i class="fa fa-book"></i>My Courses</a></li>
+            <li><a href="#"><i class="fa fa-calendar-o"></i>Sessions</a></li>
+            <li><a href="#"><i class="fa fa-bell-o"></i>Notifications</a></li>
+            <span>
+            <li><a href="#"><i class="fa fa-user-o"></i>Pikachu</a></li>
+            <li><a href="#"><i class="fa fa-sign-out"></i>Logout</a></li>
+            </span>
+        </ul>
+    </section>
+    <nav>
+        <button class="openbtn" onclick="openNav()">☰</button>
+        <img src="img/logo.png" alt="">
+      </nav>
+      <hr> 
+      <section class="right">
+        <form>
+          <h3>Create a new Course</h3>
+          <section class="course-details">
+            <h4>Course Details</h4>
+            <div class="name">
+              <label for="name">
+                <input type="text" oninput="this.className = ''" id="firstname" placeholder="course name" autofocus required>
+              </label>
+            </div>
+            <div class="grade">
+              <input name="Grade" list="Grade" oninput="this.className = ''" placeholder="course grade" required>
+              <datalist id="Grade">
+                <select name="Grade">
+                  <option value="Grade 1">Grade 1</option>
+                  <option value="Grade 2">Grade 2</option>
+                  <option value="Grade 3">Grade 3</option>
+                  <option value="Grade 4">Grade 4</option>
+                  <option value="Grade 5">Grade 5</option>
+                </select>
+              </datalist>
+            </div>    
+            <div class="description">
+              <label for="description">
+                <input type="textarea" oninput="this.className = ''" id="email" placeholder="course description" required>
+              </label> 
+            </div>    
+            <div class="upload">
+              <label for="cover-image">
+                <input type="file" oninput="this.className = ''" class="custom-file-input" required>
+              </label> 
+              <button class="but" type="button">UPLOAD</button>
+            </div>      
+            <section style="overflow:auto;">
+            <div>
+              <button class="butn" type="button" id="nextBtn" onclick="nextPrev(1)">Save</button>
+            </div>
+          </section>
         </section>
-      </fieldset>
-
-      <div style="overflow:auto;">
-        <div style="float:right;">
-          <button class="butn" type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
-          <button class="butn" type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
-        </div>
-      </div>
-
-      <!-- Circles which indicates the steps of the form: -->
-      <div style="text-align:center; margin-top:40px;">
-        <span class="step"></span>
-        <span class="step"></span>
-      </div>
-    </form>  
-  </section>
-
-<script src="./js/signup/signup.js"></script>
-<script src="./js/signup/signin.js"></script>
-
+        <section class="course-content">
+          <h4>Course Content</h4>
+          <div class="chap">
+            <label for="chap">
+              <input type="text" oninput="this.className = ''" placeholder="chapter name" autofocus required>
+            </label>
+          </div>
+          <div class="content-type">
+            <input name="content-type" list="content-type" oninput="this.className = ''" placeholder="content type" required>
+            <datalist id="content-type">
+              <select name="content-type">
+                <option value="Video">Video</option>
+                <option value="Audio">Audio</option>
+                <option value="Text">Text</option>
+              </select>
+            </datalist>
+          </div>    
+          <div class="upload2">
+            <!-- <label for="cover-image">
+              <input type="file" oninput="this.className = ''" class="custom-file-input" required>
+            </label>  -->
+            <button class="but" type="button">UPLOAD</button>
+          </div>      
+          <section style="overflow:auto;" class="save">
+          <div class="flex-container">
+            <p><a href="#">Add New Chapter</a></p>
+            <button class="butn" type="button" id="nextBtn" onclick="nextPrev(1)">Save</button>
+          </div>
+        </section>          
+        </section>
+        </form>  
+      </section>
+    <script>
+        function openNav() {
+          document.getElementById("mySidebar").style.width = "250px";
+          document.getElementById("main").style.marginLeft = "250px";
+        }
+        
+        function closeNav() {
+          document.getElementById("mySidebar").style.width = "0";
+          document.getElementById("main").style.marginLeft= "0";
+        }
+    </script>
 </body>
 </html>
